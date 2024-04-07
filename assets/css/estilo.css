@@ -1,0 +1,777 @@
+/*ESTILOS GENERALES*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+header {
+    margin-top: 10px;
+}
+
+li {
+    display: inline;
+    margin: 0 2%;
+    margin-top: 5%;
+}
+
+h3,
+h4 {
+    text-align: left;
+}
+
+a {
+    color: rgb(31, 95, 255);
+    text-decoration: none;
+    text-align: left;
+
+}
+
+/*CABEERA Y LOGO */
+
+#logo {
+    width: 240px;
+    height: 75px;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    #logo {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+nav {
+    font-size: 17px;
+    height: 45px;
+    margin-top: 20px;
+    background-color: rgb(4, 64, 113);
+
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: 30px;
+    }
+}
+
+
+#cabecera {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+}
+
+#lista-redes {
+    width: 450px;
+    height: 80px;
+    text-align: center;
+    margin-left: auto;
+    margin: 0 7% 0 7%;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+    #lista-redes {
+        margin-left: 2%;
+    }
+}
+
+
+#lista-redes li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px;
+    margin-top: 30px;
+}
+
+#lista-redes li img {
+    height: 32px;
+    width: 32px;
+}
+
+
+/* ACABAR ESTO HACER FUNCIONAR LUPA RATON POR ENCIMA
+
+#input-busqueda {
+    display: none;
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+#imagen-lupa:hover + #input-busqueda {
+    display: block;
+}
+*/
+
+
+
+/*MENU NAVEGACION*/
+
+
+#lista-menu {
+    margin-left: 10%;
+    margin-right: 9.5%;
+    margin-top: 0;
+    color: white;
+    font-size: 17.5px;
+}
+
+@media screen and (max-width: 990px) {
+    #lista-menu {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #lista-menu {
+        margin-left: 2%;
+
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    #lista-menu {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+#contenedor-menu {
+    padding-top: 1%;
+}
+
+@media screen and (max-width: 768px) {
+    #contenedor-menu {
+        padding-top: 3px;
+    }
+}
+
+.nombre-secciones-menu {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    .nombre-secciones-menu {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nombre-secciones-menu {
+        font-size: 12px;
+    }
+}
+
+#lista-menu li {
+    margin-top: 25px;
+    
+
+}
+
+
+@media screen and (max-width: 768px) {
+    #lista-menu li {
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #lista-menu li {
+        margin: 1%;
+
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #lista-menu li {
+        margin: 2%;
+    }
+}
+
+
+#lista-eventos {
+    display: inline;
+}
+
+#lista-eventos-desplegable {
+    top: 9.5em;
+    left: 11%;
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(28, 80, 171);
+    padding: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: auto;
+    width: 150px;
+    z-index: 1;
+    border-radius: 4px;
+    border-top: solid 5px rgb(92, 207, 222);
+}
+
+@media screen and (max-width: 1024px) {
+    #lista-eventos-desplegable {
+        left: 6%;
+        top: 9em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #lista-eventos-desplegable {
+        left: 6%;
+        top: 10.8em;
+    }
+}
+
+#lista-eventos-desplegable li {
+    text-align: left;
+    display: flex;
+    margin: 3px;
+}
+
+
+#lista-menu #lista-eventos:hover #lista-eventos-desplegable {
+    display: block;
+
+}
+
+#lista-eventos-desplegable,
+#lista-atletas-desplegable,
+#lista-multimedia-desplegable {
+    animation-duration: 0.5s;
+    animation-name: borde-abre;
+    animation: aparece-izquierda 0.5s ease-out forwards;
+}
+
+@keyframes borde-abre {
+    from {
+        width: 75px;
+    }
+
+    to {
+        width: 150px;
+    }
+}
+
+
+@keyframes aparece-izquierda {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+#lista-atletas-desplegable {
+    top: 9.5em;
+    left: 31%;
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(28, 80, 171);
+    padding: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: auto;
+    width: 150px;
+    z-index: 1;
+    border-radius: 4px;
+    border-top: solid 5px rgb(92, 207, 222);
+
+}
+
+@media screen and (width: 768px) {
+    #lista-atletas-desplegable {
+        top: 10.8em;
+        left: 30%;
+    }
+}
+
+@media screen and (width: 1024px) {
+    #lista-atletas-desplegable {
+        top: 9em;
+    }
+}
+
+@media screen and (width: 1024px) {
+    #lista-atletas-desplegable {
+        left: 5%;
+    }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    #lista-atletas-desplegable {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 1850px) {
+    #lista-atletas-desplegable {
+        left: 27%;
+    }
+}
+
+#lista-atletas-desplegable li {
+    margin: 3px;
+    text-align: left;
+    display: flex;
+}
+
+#lista-atletas:hover #lista-atletas-desplegable {
+    display: block;
+}
+
+
+#lista-multimedia-desplegable {
+    top: 9.5em;
+    left: 45%;
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(28, 80, 171);
+    padding: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: auto;
+    width: 150px;
+    z-index: 1;
+    border-radius: 4px;
+    border-top: solid 5px rgb(92, 207, 222);
+    z-index: 10;
+}
+
+
+@media screen and (max-width: 768px) {
+    #lista-multimedia-desplegable {
+        left: 47%;
+        top: 10.8em;
+    }
+}
+
+@media screen and (width: 1024px) {
+    #lista-multimedia-desplegable {
+        left: 47%;
+        top: 9em;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #lista-multimedia-desplegable {
+        left: 42%;
+    }
+}
+
+
+#lista-multimedia-desplegable li {
+    margin: 3px;
+    text-align: left;
+    display: flex;
+}
+
+#lista-multimedia:hover #lista-multimedia-desplegable {
+    display: block;
+}
+
+/*SLIDER*/
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 18rem;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    position: relative; /* Agrega esta línea para que los elementos dentro de la diapositiva puedan posicionarse correctamente */
+    flex: 0 0 100%;
+  }
+  
+  .slide img {
+    width: 650px;
+    height: 18rem;
+    z-index: 3;
+  }
+
+  .fotos {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    height: 250px;
+    z-index: 4;
+  }
+  
+  .container-texto-noticia-inicio {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 47%; /* Cambia la posición a la derecha */
+    bottom: 0;
+    width: 53%; /* Quita el ancho fijo */
+    background-color: rgb(19, 0, 106); /* Fondo del texto */
+    color: white; /* Color del texto */
+    padding: 10px;
+    align-items: center;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+  }
+  
+  @media screen and (width: 1440px) {
+    .container-texto-noticia-inicio {
+        left: 39%;
+    }
+}
+
+.contenido-texto-noticia {
+    display: flex;
+    margin-left: 15%;
+    height: 100px;
+    font-size: 25px;
+}
+
+.categoria-noticia {
+    display: flex;
+    margin-left: 15%;
+    height: 100px;
+    font-size: 14px;
+}
+  
+
+  p.texto-noticias-slider {
+    text-align: center;
+    margin-left: 50%;
+  }
+  
+  .botones {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .boton-noticia-inicio {
+    margin-left: 6rem;
+  }
+  
+  #prevBtn {
+    left: 0;
+    height: 30px;
+  }
+  
+  #nextBtn {
+    right: 0;
+    height: 30px;
+  }
+  
+
+  
+
+  /*clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); */
+
+
+
+/*FOOTER */
+
+footer {
+
+    background-color: rgb(221, 221, 221);
+    width: 100%;
+    height: auto;
+}
+
+
+#contenedor-footer {
+    display: flex;
+    text-align: justify;
+    font-size: 12px;
+    margin-right: 10%;
+    margin-left: 8.4rem;
+    position: static;
+}
+
+#margenes-footer {
+    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    #contenedor-footer {
+        margin-left: 6%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (width: 1440px) {
+    #contenedor-footer {
+        margin-left: 11%;
+        margin-right: 5%;
+    }
+}
+
+
+
+.enlaces-footer-final {
+    padding-top: 12%;
+    text-decoration: overline;
+}
+
+/* NOTICIAS FOOTER */
+
+#seccion-noticias {
+    margin-top: 1rem;
+}
+
+.titulos-footer {
+    font-size: 13px;
+    text-align: left;
+}
+
+.articulos {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+}
+
+@media screen and (max-width: 1440px) {
+    .articulos {
+        width: 180px;
+    }
+}
+
+.titulo-noticia {
+    color: rgb(49, 49, 191);
+    margin-bottom: 2px;
+}
+
+.subtitulo-noticia {
+    margin-bottom: 5px;
+}
+
+.final-noticia {
+    margin-bottom: 15px;
+}
+
+
+
+
+/*PROXMOS EVENTOS FOOTER */
+
+#lista-proximo-eventos {
+    width: 150px;
+
+}
+
+
+.banderas {
+    position: relative;
+    display: inline-block;
+    line-height: 1em;
+    width: 1.333em;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+
+.titulo-evento-footer {
+    margin-bottom: 3%;
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: -4%;
+}
+
+.titulo-evento-footer-primero {
+    margin-bottom: 3%;
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: -2%;
+}
+
+.lugar-pruebas-footer {
+    display: block;
+    margin-top: 2%;
+
+}
+
+.contenedor-archivo-resultados {
+    display: block;
+}
+
+.archivo-clasificaciones {
+    margin-top: 0.5rem;
+}
+
+.enlace-clasificaciones-footer {
+    text-align: left;
+    font-size: 10px;
+    align-self: center;
+    line-height: 10px;
+
+}
+
+/*Si quiero ponerle una clases a las imagenes PDF se llamaría  imagen-archivo */
+
+
+
+
+
+
+
+
+/* MULTIMEDIA FOOTER */
+
+li div {
+    display: inline-block;
+}
+
+#contenedor-multimedia {
+    width: 200px;
+
+}
+
+#lista-multimedia-footer {
+    margin-top: 1rem;
+    margin: 0 5% 0 5%;
+
+}
+
+#prueba {
+    display: flex;
+    margin-bottom: 10%;
+}
+
+.videos {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 25px;
+    margin-left: -3%;
+}
+
+
+.espacio-a {
+    margin-right: 20px;
+}
+
+
+.div-ivideo {
+    margin-right: 10px;
+}
+
+
+.div-texto {
+    max-width: 200px;
+    margin-left: 10px;
+}
+
+
+/*SITIOS DE INTERES Y EMAIL */
+
+.contenedor-email {
+    margin: 0 20px 0 20px;
+    width: 150px;
+}
+
+#lista-info {
+    display: grid;
+    margin-bottom: 5%;
+    list-style: circle;
+}
+
+#lista-info li {
+    color: rgb(31, 31, 220);
+    font-size: 12px;
+}
+
+#enviar-correo label,
+#enviar-correo input {
+    display: block;
+    margin-bottom: 10px;
+    /* Espacio entre elementos */
+}
+
+#texto-email {
+    width: 95%;
+}
+
+#boton-enviar {
+    width: 100px;
+}
+
+@media screen and (max-width: 1440px) {
+    #boton-enviar {
+        width: 125px;
+    }
+}
+
+/*POR DEBAJO DEL FOOTER */
+
+#info-sobre-nosotros {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    font-size: 14px;
+}
+
+#simbolo {
+    float: left;
+    margin-left: 9.5rem;
+}
+
+#final-sobre-nosotros {
+    margin-left: 25%;
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+
+#final-sobre-nosotros>div {
+    width: 200px;
+    font-size: 12px;
+    
+}
+
+.enlaces-sin-color {
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* MENU MOVILES */
