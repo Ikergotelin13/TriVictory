@@ -50,6 +50,9 @@ document.getElementById("lista-multimedia").addEventListener("mouseover", functi
 });
 
 
+
+
+
 /*SLIDER*/
 
 const prevBtnSlider = document.getElementById('prevBtn');
@@ -146,3 +149,4 @@ function updateSliderTienda(slideWidthIncrement) {
   const offsetSliderTienda = -counterSliderTienda * slideWidthIncrement;
   sliderSliderTienda.style.transform = `translateX(${offsetSliderTienda}px)`;
 }
+
