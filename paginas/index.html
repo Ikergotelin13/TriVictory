@@ -35,7 +35,8 @@
                             <li>Triatlón Cross</li>
                         </ul>
                     </li>
-                    <li class="nombre-secciones-menu">Resultados</li>
+                    <li class="nombre-secciones-menu"><a href="../paginas/resultados.html"
+                            class="enlaces-header">Resultados</a> </li>
                     <li id="lista-atletas" class="nombre-secciones-menu">Atletas
                         <ul id="lista-atletas-desplegable">
                             <li>Buscador de atletas</li>
@@ -109,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <button id="prevBtn"  class="botones" onclick="plusSlides(-1)">&#10094;</button>
+        <button id="prevBtn" class="botones" onclick="plusSlides(-1)">&#10094;</button>
         <button id="nextBtn" class="botones" onclick="plusSlides(1)">&#10095;</button>
     </div>
 
@@ -147,7 +148,7 @@
         <section id="container-noticias-pequeñas">
 
             <article class="noticias-pequeñas">
-                <div>
+                <div class="contenido-noticias-pequeñas">
                     <img src="../assets/img/Sergio Correa.jpg" alt="" class="imagenes-noticias-pequeñas">
                     <div class="relato-noticias-pequeñas">
                         <a href="">Sergio Correa se proclama campeón de España de Duatlón Cross a sus solo 26 años
@@ -158,7 +159,7 @@
             </article>
 
             <article class="noticias-pequeñas">
-                <div>
+                <div class="contenido-noticias-pequeñas">
                     <img src="../assets/img/Almazan 2023.jpg" alt="" class="imagenes-noticias-pequeñas">
                     <div class="relato-noticias-pequeñas">
                         <a href="">El club Triatlón Rincón se proclama subcampeón de España de Triatlón Cross en
@@ -169,7 +170,7 @@
             </article>
 
             <article class="noticias-pequeñas">
-                <div>
+                <div class="contenido-noticias-pequeñas">
                     <img src="../assets/img/SwinRun.PNG" alt="" class="imagenes-noticias-pequeñas">
                     <div class="relato-noticias-pequeñas">
                         <a href=""> Clara Davies consigue el subcampeonato de España de SwinRun celebrado en la
@@ -182,7 +183,7 @@
             <article class="noticias-pequeñas">
                 <div class="relato-noticias-pequeñas">
                     <img src="../assets/img/Campeonato Juvenil.PNG" alt="" class="imagenes-noticias-pequeñas">
-                    <div class="relato-noticias-pequeñas">
+                    <div class="contenido-noticias-pequeñas">
                         <a href="">Irene Rubiales se alza con el título de Campeona de Andalucía de Duatlón Cros
                             Juvenil el pasado domingo en Garrucha</a>
                     </div>
@@ -195,88 +196,90 @@
 
 
     <!--APARTADO TIENDA-->
-    <h2 id="titulo-tienda">Tienda</h2>
-    <div class="slider-tienda">
-        <div id="prueba-slider">
-            <div class="slide-tienda">
-                <img src="../assets/img/TriTrajeEspaña.jpg" alt="Producto 1" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 1</h3>
-                    <p>Precio: $50</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div id="container-tienda">
+        <h2 id="titulo-tienda">Tienda</h2>
+        <div class="slider-tienda">
+            <div id="prueba-slider">
+                <div class="slide-tienda">
+                    <img src="../assets/img/TriTrajeEspaña.jpg" alt="Producto 1" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 1</h3>
+                        <p>Precio: $50</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Bici-tienda.jpg" alt="Producto 2" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 2</h3>
-                    <p>Precio: $70</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Bici-tienda.jpg" alt="Producto 2" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 2</h3>
+                        <p>Precio: $70</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Zapatillas.jpg" alt="Producto 3" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 3</h3>
-                    <p>Precio: $90</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Zapatillas.jpg" alt="Producto 3" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 3</h3>
+                        <p>Precio: $90</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Repite los primeros tres productos para completar los 9 -->
-            <div class="slide-tienda">
-                <img src="../assets/img/Bañador.jpg" alt="Producto 4" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 4</h3>
-                    <p>Precio: $50</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <!-- Repite los primeros tres productos para completar los 9 -->
+                <div class="slide-tienda">
+                    <img src="../assets/img/Bañador.jpg" alt="Producto 4" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 4</h3>
+                        <p>Precio: $50</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Calas Carretera.jpg" alt="Producto 5" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 5</h3>
-                    <p>Precio: $70</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Calas Carretera.jpg" alt="Producto 5" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 5</h3>
+                        <p>Precio: $70</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Casco.jpg" alt="Producto 6" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 6</h3>
-                    <p>Precio: $90</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Casco.jpg" alt="Producto 6" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 6</h3>
+                        <p>Precio: $90</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Vaporfly.png" alt="Producto 7" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 7</h3>
-                    <p>Precio: $50</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Vaporfly.png" alt="Producto 7" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 7</h3>
+                        <p>Precio: $50</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Culott.jpg" alt="Producto 8" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 8</h3>
-                    <p>Precio: $70</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Culott.jpg" alt="Producto 8" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 8</h3>
+                        <p>Precio: $70</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="slide-tienda">
-                <img src="../assets/img/Mono Ciclismo.jpg" alt="Producto 9" class="imagenes-productos">
-                <div class="product-info">
-                    <h3>Producto 9</h3>
-                    <p>Precio: $90</p>
-                    <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="slide-tienda">
+                    <img src="../assets/img/Mono Ciclismo.jpg" alt="Producto 9" class="imagenes-productos">
+                    <div class="product-info">
+                        <h3>Producto 9</h3>
+                        <p>Precio: $90</p>
+                        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
+                <!-- Fin de los productos duplicados -->
             </div>
-            <!-- Fin de los productos duplicados -->
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
         </div>
-        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
-    
+
 
 
     <!--FOOTER-->
@@ -594,12 +597,14 @@
     </footer>
     <div id="info-sobre-nosotros">
         <div id="simbolo">
-            <div> <a href="" class="enlaces-sin-color">&#169 TriVictory</a></div>
+            <div id="prueba-footer-abajo">
+                <a href="" class="enlaces-sin-color">&#169 TriVictory</a>
+            </div>
         </div>
         <div id="final-sobre-nosotros">
-            <div><a href="" class="enlaces-sin-color">Sobre nosotros</a> </div>
-            <div><a href="" class="enlaces-sin-color"> Terminos y condiciones</a></div>
-            <div><a href="" class="enlaces-sin-color">Cookies</a> </div>
+            <div class="enlaces-debajo-footer"><a href="" class="enlaces-sin-color">Sobre nosotros</a> </div>
+            <div class="enlaces-debajo-footer"><a href="" class="enlaces-sin-color"> Terminos y condiciones</a></div>
+            <div class="enlaces-debajo-footer"><a href="" class="enlaces-sin-color">Cookies</a> </div>
         </div>
     </div>
     <script src="../assets/js/script.js"></script>
