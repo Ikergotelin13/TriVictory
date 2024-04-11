@@ -935,24 +935,24 @@ p.texto-noticias-slider {
 
 @media only screen and (max-width: 400px) {
     .imagenes-noticias-pequeñas {
-        width: 15rem;
-        height: 15rem;
+        width: 17rem;
+        height: 17rem;
     }
 
     .contenido-noticias-pequeñas {
         width: 20rem;
-        margin-left: -1.5rem;
+        margin-left: -1rem;
 
     }
 
     #container-ultimas-noticias {
-        height: 125rem;
+        height: 130rem;
     }
 }
 
 @media only screen and (max-width: 300px) {
     #container-ultimas-noticias {
-        height: 127rem;
+        height: 134rem;
     }
 }
 
@@ -971,7 +971,7 @@ p.texto-noticias-slider {
 
 @media only screen and (max-width: 550px) {
     #container-tienda {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 }
 
