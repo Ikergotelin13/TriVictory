@@ -67,6 +67,14 @@ a:hover {
     }
 }
 
+@media screen and (max-width: 370px) {
+    #logo {
+        width: 5rem;
+        height: 2rem;
+        margin-top: 1.5rem;
+    }
+}
+
 
 nav {
     font-size: 17px;
@@ -168,7 +176,7 @@ nav {
 @media screen and (max-width: 500px) {
     #input-busqueda {
         width: 4rem;
-        height: 2rem;
+        height: 1.3rem;
     }
 }
 
@@ -335,6 +343,16 @@ nav {
     animation: aparece-izquierda 0.5s ease-out forwards;
 }
 
+
+@media screen and (max-width: 950px) {
+    #lista-eventos-desplegable,
+    #lista-atletas-desplegable,
+    #lista-multimedia-desplegable {
+        width: 6.5rem;
+        top: 8.rem;
+    }
+}
+
 @keyframes borde-abre {
     from {
         width: 75px;
@@ -378,7 +396,7 @@ nav {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     #lista-atletas-desplegable {
         top: 15em;
         left: 30%;
@@ -671,6 +689,7 @@ p.texto-noticias-slider {
     #foto {
         margin-bottom: 0;
         width: 350px;
+        margin-left: 0rem;
     }
 
 }
@@ -747,15 +766,15 @@ p.texto-noticias-slider {
 
 @media only screen and (max-width: 450px) {
     #foto-noticia {
-        margin-left: 1rem;
-        width: 16rem;
+        margin-left: 0.5rem;
+        width: 20rem;
     }
 }
 
 @media only screen and (max-width: 375px) {
     #foto-noticia {
         margin-left: 2rem;
-        width: 14rem;
+        width: 19rem;
     }
 }
 
@@ -935,8 +954,8 @@ p.texto-noticias-slider {
 
 @media only screen and (max-width: 400px) {
     .imagenes-noticias-pequeñas {
-        width: 17rem;
-        height: 17rem;
+        width: 19rem;
+        height: 19rem;
     }
 
     .contenido-noticias-pequeñas {
@@ -946,7 +965,7 @@ p.texto-noticias-slider {
     }
 
     #container-ultimas-noticias {
-        height: 130rem;
+        height: 140rem;
     }
 }
 
