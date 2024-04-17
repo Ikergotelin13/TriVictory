@@ -62,7 +62,7 @@ const slidesSlider = document.querySelectorAll('.slide');
 
 let counterSlider = 0;
 const slideWidthSlider = slidesSlider[0].clientWidth;
-const intervalTimeSlider = 5000; // Intervalo de tiempo en milisegundos (5 segundos)
+const intervalTimeSlider = 50000000; // Intervalo de tiempo en milisegundos (5 segundos)
 
 let autoSlideIntervalSlider; // Variable para almacenar el intervalo del desplazamiento automático
 
@@ -104,6 +104,8 @@ function updateSlider() {
   const offsetSlider = -counterSlider * slideWidthSlider;
   sliderSlider.style.transform = `translateX(${offsetSlider}px)`;
 }
+
+
 
 /*SLIDER TIENDA*/
 const prevBtnSliderTienda = document.querySelector('.prev');
@@ -150,10 +152,11 @@ function updateSliderTienda(slideWidthIncrement) {
   sliderSliderTienda.style.transform = `translateX(${offsetSliderTienda}px)`;
 }
 
+
 /*AGREGAR HEADER Y FOOTER*/
 
 // Cargar el header del HTML externo
-fetch('/index.html')
+fetch('../TriVictory/index.html')
 .then(response => response.text())
 .then(html => {
     const parser = new DOMParser();
@@ -163,7 +166,7 @@ fetch('/index.html')
 });
 
 // Cargar el footer del HTML externo
-fetch('/index.html')
+fetch('../TriVictory/index.html')
 .then(response => response.text())
 .then(html => {
     const parser = new DOMParser();
@@ -171,4 +174,3 @@ fetch('/index.html')
     const footerContent = doc.getElementById('footerContainer').innerHTML;
     document.getElementById('footerContainer').innerHTML = footerContent;
 });
-
