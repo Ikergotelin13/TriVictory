@@ -538,9 +538,15 @@ nav {
     }
 }
 
+@media screen and (min-width: 1420px) {
+    .slide img {
+        width: 50%;
+    }
+}
+
 .fotos {
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    height: 250px;
+    height: auto;
     z-index: 4;
 }
 
@@ -561,20 +567,17 @@ nav {
     align-items: center;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
     z-index: 2;
+    right: 0;
 }
 
 
-@media screen and (width: 1440px) {
+@media screen and (min-width: 1420px) {
     .container-texto-noticia-inicio {
-        left: 39%;
+        left: 45%;
     }
 }
 
-@media screen and (width: 1920px) {
-    .container-texto-noticia-inicio {
-        width: 750px;
-    }
-}
+
 
 .contenido-texto-noticia {
     display: flex;
@@ -854,7 +857,6 @@ p.texto-noticias-slider {
     width: 15rem;
     height: 15rem;
     border-radius: 10px;
-    border: solid rgb(113, 210, 243);
     margin-bottom: 1rem;
 }
 
@@ -1017,10 +1019,10 @@ p.texto-noticias-slider {
     margin-top: 2rem;
     margin: auto;
     position: relative;
-    border: 1px solid #000000;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 1rem;
+    margin-left: 4rem;
 }
 
 
@@ -1056,7 +1058,7 @@ p.texto-noticias-slider {
     position: absolute;
     top: 50%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.742);
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -1134,8 +1136,8 @@ footer a {
 #contenedor-footer {
     display: flex;
     text-align: left;
+    justify-content: space-evenly;
     font-size: 12px;
-    margin-left: 5%;
 }
 
 #margenes-footer {
@@ -1196,10 +1198,6 @@ footer a {
         font-size: 10px;
     }
 }
-
-
-
-
 
 .enlaces-footer-final {
     padding-top: 12%;
@@ -1421,7 +1419,7 @@ li div {
 }
 
 #texto-email {
-    width: 95%;
+    width: 50%;
 }
 
 #boton-enviar {
@@ -1513,5 +1511,166 @@ li div {
 }
 
 
+/*EVENTOS.HTML*/
+
+#contenedor-completo {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.listas-filtros {
+    width: 15px;
+}
+
+#lista-filtros {
+    width: auto;
+}
+
+#container-titulo {
+    width: auto;
+    text-align: center;
+    height: 4rem;
+    margin: 1rem;
+}
+
+#subtitulo-eventos {
+    width: auto;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+}
+
+#busqueda {
+    width: auto;
+    text-align: center;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+}
+#container-filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    
+}
+
+.listas-filtros {
+    width: 11rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 2rem;
+}
+
+select{
+    border-radius: 10px;
+    height: 1.88rem;
+}
+
+.botones-filtros {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: auto;
+    border-radius: 5px;
+    height: 1.88rem;
+}
+
+#boton-buscar {
+    width: 4rem;
+}
+
+.Mes {
+    font-size: 25px;
+    text-align: left;
+    width:auto;
+    color: rgb(43, 43, 188);
+    margin-bottom: 2rem;
+    
+}
+
+#Todo-completos {
+    margin-right: 5rem;
+    margin-left: 3rem;
+}
+
+#mes-texto {
+    margin-left: 1rem;
+}
+
+#container-listado-competiciones {
+    margin-bottom:1rem;
+}
+
+#listado-superior {
+    display: flex;
+    margin-left: 1rem;
+    height: 3rem;
+    background-color: rgb(46, 46, 218);
+    
+
+}
+
+#listado-superior div {
+   color: white;
+   justify-content: center;
+   align-items: center;
+   margin-top: 1rem;
+   margin-left: 1rem;
+  }
+
+.Modalidad {
+    width: 7rem
+}
+
+.Competicion {
+    width: 19rem;
+}
+
+.Categoria {
+    width: 7rem;
+}
+
+.Distancia {
+    width: 7.3rem;
+}
+
+.Fecha {
+    width: 12rem;
+}
+
+.competi {
+    background-color: #ccc;
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.competi div {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+  .competi2 {
+    background-color: aliceblue;
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .competi2 div {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*RESULTADOS HTML*/
+
+.listas-filtros-resultados {
+    width: 8.7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 2rem;
+}
 
 /* MENU MOVILES */
