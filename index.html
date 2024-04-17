@@ -11,22 +11,23 @@
 
 <body>
     <!--HEADER-->
-    <header>
+    <header id="headerContainer">
         <div id="cabecera">
-            <img src="./assets/img/trivictory -02.png" alt="" id="logo">
+            <img src="/assets/img/trivictory -02.png" alt="" id="logo">
             <ul id="lista-redes">
                 <input type="search" id="input-busqueda" placeholder="Buscar...">
-                <li><img src="./assets/img/lupa.png" alt="" id="imagen-lupa"></li>
-                <li><a href="https://www.facebook.com/?locale=es_ES"><img src="./assets/img/facebook.png" alt=""></a>
+                <li><img src="/assets/img/lupa.png" alt="" id="imagen-lupa"></li>
+                <li><a href="https://www.facebook.com/?locale=es_ES"><img src="/assets/img/facebook.png" alt=""></a>
                 </li>
-                <li><a href="https://www.instagram.com"><img src="./assets/img/instagram.png" alt=""></a></li>
-                <li><a href="https://twitter.com/home?lang=es"><img src="./assets/img/x.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com"><img src="/assets/img/instagram.png" alt=""></a></li>
+                <li><a href="https://twitter.com/home?lang=es"><img src="/assets/img/x.png" alt=""></a></li>
             </ul>
         </div>
         <nav>
             <div id="contenedor-menu">
                 <ul id="lista-menu">
-                    <li id="lista-eventos" class="nombre-secciones-menu">Eventos
+                    <li id="lista-eventos" class="nombre-secciones-menu"><a href="./paginas/eventos.html"
+                            class="enlaces-header">Eventos</a>
                         <ul id="lista-eventos-desplegable">
                             <li>Triatlón</li>
                             <li>Duatlón</li>
@@ -46,16 +47,21 @@
                         </ul>
                     </li>
                     <li class="nombre-secciones-menu">Noticias</li>
-                    <li id="lista-multimedia" class="nombre-secciones-menu">Multimedia
+                    <li id="lista-multimedia" class="nombre-secciones-menu"><a href="../paginas/resultados.html"
+                        class="enlaces-header">Multimedia</a>
                         <ul id="lista-multimedia-desplegable">
                             <li>Videos</li>
                             <li>Fotos</li>
                         </ul>
                     </li>
-                    <li class="nombre-secciones-menu">Nutrición</li>
-                    <li class="nombre-secciones-menu">Estiramientos</li>
-                    <li class="nombre-secciones-menu">Tienda</li>
-                    <li class="nombre-secciones-menu">Sobre </li>
+                    <li class="nombre-secciones-menu"><a href="../paginas/resultados.html"
+                        class="enlaces-header">Nutrición</a></li>
+                    <li class="nombre-secciones-menu"><a href="../paginas/resultados.html"
+                        class="enlaces-header">Estiramientos</a></li>
+                    <li class="nombre-secciones-menu"><a href="../paginas/resultados.html"
+                        class="enlaces-header">Tienda</a></li>
+                    <li class="nombre-secciones-menu"><a href="../paginas/resultados.html"
+                        class="enlaces-header">Sobre nosotros</a> </li>
                 </ul>
             </div>
         </nav>
@@ -283,7 +289,7 @@
 
 
     <!--FOOTER-->
-    <footer>
+    <footer id="footerContainer">
         <div id="margenes-footer">
             <div id="contenedor-footer">
                 <!--NOTICIAS-->
