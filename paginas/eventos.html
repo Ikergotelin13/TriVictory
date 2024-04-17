@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <div id="headerContainer"></div>
+    </header>
+
+    <main>
+       <div></div>
+    </main>
+    
+    <footer>
+        <div id="footerContainer"></div>
+    </footer>
+
+    <!-- Script para cargar el encabezado y el pie de página -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar el encabezado desde el index.html
+            fetch('../../index.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const headerContent = doc.querySelector('header').innerHTML;
+                document.getElementById('headerContainer').innerHTML = headerContent;
+            });
+
+            // Cargar el pie de página desde el index.html
+            fetch('../../index.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const footerContent = doc.querySelector('footer').innerHTML;
+                document.getElementById('footerContainer').innerHTML = footerContent;
+            });
+        });
+    </script>
+</body>
+
+</html>
