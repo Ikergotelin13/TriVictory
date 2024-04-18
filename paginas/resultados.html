@@ -481,7 +481,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Cargar el encabezado desde el index.html
-            fetch('eventos.html')
+            fetch('./eventos.html')
                 .then(response => response.text())
                 .then(html => {
                     const parser = new DOMParser();
@@ -491,7 +491,7 @@
                 });
 
             // Cargar el pie de página desde el index.html
-            fetch('eventos.html')
+            fetch('./eventos.html')
                 .then(response => response.text())
                 .then(html => {
                     const parser = new DOMParser();
