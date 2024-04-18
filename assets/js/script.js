@@ -156,7 +156,7 @@ function updateSliderTienda(slideWidthIncrement) {
 /*AGREGAR HEADER Y FOOTER*/
 
 // Cargar el header del HTML externo
-fetch('../TriVictory/index.html')
+fetch('../index.html')
 .then(response => response.text())
 .then(html => {
     const parser = new DOMParser();
@@ -166,7 +166,7 @@ fetch('../TriVictory/index.html')
 });
 
 // Cargar el footer del HTML externo
-fetch('../TriVictory/index.html')
+fetch('../index.html')
 .then(response => response.text())
 .then(html => {
     const parser = new DOMParser();
