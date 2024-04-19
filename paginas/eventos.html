@@ -9,65 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <header id="headerContainer">
-            <div id="cabecera">
-                <a href="../index.html"><img src="../assets/img/trivictory -02.png" alt="" id="logo"></a>
-                <ul id="lista-redes">
-                    <input type="search" id="input-busqueda" placeholder="Buscar...">
-                    <li><img src="../assets/img/lupa.png" id="imagen-lupa"></li>
-                    <li><a href="https://www.facebook.com/?locale=es_ES"><img src="../assets/img/facebook.png" alt=""></a>
-                    </li>
-                    <li><a href="https://www.instagram.com"><img src="../assets/img/instagram.png" alt=""></a></li>
-                    <li><a href="https://twitter.com/home?lang=es"><img src="../assets/img/x.png"></a></li>
-                </ul>
-            </div>
-            <nav>
-                <div id="contenedor-menu">
-                    <ul id="lista-menu">
-                        <li id="lista-eventos" class="nombre-secciones-menu"><a href="./eventos.html"
-                                class="enlaces-header">Eventos</a>
-                            <ul id="lista-eventos-desplegable">
-                                <li>Triatlón</li>
-                                <li>Duatlón</li>
-                                <li>Acuatlón</b></li>
-                                <li>Duatlón Cross</li>
-                                <li>Triatlón Cross</li>
-                            </ul>
-                        </li>
-                        <li class="nombre-secciones-menu"><a href="./resultados.html"
-                                class="enlaces-header">Resultados</a> </li>
-                        <li id="lista-atletas" class="nombre-secciones-menu">Atletas
-                            <ul id="lista-atletas-desplegable">
-                                <li>Buscador de atletas</li>
-                                <li>Rankings</li>
-                                <li>Historia</li>
-                                <li>Elites</li>
-                            </ul>
-                        </li>
-                        <li class="nombre-secciones-menu">Noticias</li>
-                        <li id="lista-multimedia" class="nombre-secciones-menu"><a href="./resultados.html"
-                            class="enlaces-header">Multimedia</a>
-                            <ul id="lista-multimedia-desplegable">
-                                <li>Videos</li>
-                                <li>Fotos</li>
-                            </ul>
-                        </li>
-                        <li class="nombre-secciones-menu"><a href="./resultados.html"
-                            class="enlaces-header">Nutrición</a></li>
-                        <li class="nombre-secciones-menu"><a href="./resultados.html"
-                            class="enlaces-header">Estiramientos</a></li>
-                        <li class="nombre-secciones-menu"><a href="./resultados.html"
-                            class="enlaces-header">Tienda</a></li>
-                        <li class="nombre-secciones-menu"><a href="./resultados.html"
-                            class="enlaces-header">Sobre nosotros</a> </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    
-    </header>
-
+    <header id="header"></header>
     <main id="contenedor-completo">
         <div>
             <div id="container-titulo">
@@ -79,7 +21,9 @@
                     sunt vitae.</p>
             </div>
             <div>
-                <div id="busqueda"> <h2>Busqueda avanzada</h2></div>
+                <div id="busqueda">
+                    <h2>Busqueda avanzada</h2>
+                </div>
             </div>
             <div id="container-filtros">
                 <ul>
@@ -143,7 +87,9 @@
 
         <div id="Todo-completos">
             <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Junio 2024</h4></div>
+                <div class="Mes">
+                    <h4 id="mes-texto">Junio 2024</h4>
+                </div>
                 <div id="listado-superior">
                     <div class="Modalidad">Modalidad</div>
                     <div class="Competicion">Competición</div>
@@ -151,10 +97,11 @@
                     <div class="Distancia">Distancia</div>
                     <div class="Fecha">Fecha</div>
                 </div>
-                <section >
+                <section>
                     <section class="competi">
                         <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                        <div class="Competicion"><a href="./info-inscripciones.html" class="enlaces-competiciones"> XII
+                                Desafio Calima Posadas</a></div>
                         <div class="Categoria">Adultos</div>
                         <div class="Distancia">Sprint</div>
                         <div class="Fecha"> Sabado 1 de Junio de 2024</div>
@@ -162,26 +109,29 @@
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
                 <section class="competi">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> II Circuito Urbano Rincón de la
+                            Victoria</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
             </div>
         </div>
 
@@ -189,7 +139,9 @@
 
         <div id="Todo-completos">
             <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Julio 2024</h4></div>
+                <div class="Mes">
+                    <h4 id="mes-texto">Julio 2024</h4>
+                </div>
                 <div id="listado-superior">
                     <div class="Modalidad">Modalidad</div>
                     <div class="Competicion">Competición</div>
@@ -197,10 +149,11 @@
                     <div class="Distancia">Distancia</div>
                     <div class="Fecha">Fecha</div>
                 </div>
-                <section >
+                <section>
                     <section class="competi">
                         <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                        <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de
+                                la reunion</a></div>
                         <div class="Categoria">Adultos</div>
                         <div class="Distancia">Sprint</div>
                         <div class="Fecha"> Sabado 1 de Junio de 2024</div>
@@ -208,73 +161,29 @@
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
                 <section class="competi">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
-            </div>
-        </div>
-
-
-
-
-        <div id="Todo-completos">
-            <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Agosto 2024</h4></div>
-                <div id="listado-superior">
-                    <div class="Modalidad">Modalidad</div>
-                    <div class="Competicion">Competición</div>
-                    <div class="Categoria">Categoria</div>
-                    <div class="Distancia">Distancia</div>
-                    <div class="Fecha">Fecha</div>
-                </div>
-                <section >
-                    <section class="competi">
-                        <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                        <div class="Categoria">Adultos</div>
-                        <div class="Distancia">Sprint</div>
-                        <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-                    </section>
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-                <section class="competi">
-                    <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                    <div class="Categoria">Adultos</div>
-                    <div class="Distancia">Sprint</div>
-                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-                </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
             </div>
         </div>
 
@@ -283,7 +192,9 @@
 
         <div id="Todo-completos">
             <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Septiembre 2024</h4></div>
+                <div class="Mes">
+                    <h4 id="mes-texto">Agosto 2024</h4>
+                </div>
                 <div id="listado-superior">
                     <div class="Modalidad">Modalidad</div>
                     <div class="Competicion">Competición</div>
@@ -291,10 +202,11 @@
                     <div class="Distancia">Distancia</div>
                     <div class="Fecha">Fecha</div>
                 </div>
-                <section >
+                <section>
                     <section class="competi">
                         <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                        <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de
+                                la reunion</a></div>
                         <div class="Categoria">Adultos</div>
                         <div class="Distancia">Sprint</div>
                         <div class="Fecha"> Sabado 1 de Junio de 2024</div>
@@ -302,32 +214,90 @@
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
                 <section class="competi">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
+            </div>
+        </div>
+
+
+
+
+        <div id="Todo-completos">
+            <div id="container-listado-competiciones">
+                <div class="Mes">
+                    <h4 id="mes-texto">Septiembre 2024</h4>
+                </div>
+                <div id="listado-superior">
+                    <div class="Modalidad">Modalidad</div>
+                    <div class="Competicion">Competición</div>
+                    <div class="Categoria">Categoria</div>
+                    <div class="Distancia">Distancia</div>
+                    <div class="Fecha">Fecha</div>
+                </div>
+                <section>
+                    <section class="competi">
+                        <div class="Modalidad">Triatlon Cross</div>
+                        <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de
+                                la reunion</a></div>
+                        <div class="Categoria">Adultos</div>
+                        <div class="Distancia">Sprint</div>
+                        <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                    </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
+                <section class="competi">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
             </div>
         </div>
 
         <div id="Todo-completos">
             <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Octubre 2024</h4></div>
+                <div class="Mes">
+                    <h4 id="mes-texto">Octubre 2024</h4>
+                </div>
                 <div id="listado-superior">
                     <div class="Modalidad">Modalidad</div>
                     <div class="Competicion">Competición</div>
@@ -335,10 +305,11 @@
                     <div class="Distancia">Distancia</div>
                     <div class="Fecha">Fecha</div>
                 </div>
-                <section >
+                <section>
                     <section class="competi">
                         <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                        <div class="Competicion"><a href="./info-inscripciones.html" class="enlaces-competiciones"> XXVI
+                                Triatlon Cross Minas de la reunion</a></div>
                         <div class="Categoria">Adultos</div>
                         <div class="Distancia">Sprint</div>
                         <div class="Fecha"> Sabado 1 de Junio de 2024</div>
@@ -346,32 +317,37 @@
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
                 <section class="competi">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
             </div>
         </div>
 
         <div id="Todo-completos">
             <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Noviembre 2024</h4></div>
+                <div class="Mes">
+                    <h4 id="mes-texto">Noviembre 2024</h4>
+                </div>
                 <div id="listado-superior">
                     <div class="Modalidad">Modalidad</div>
                     <div class="Competicion">Competición</div>
@@ -379,10 +355,11 @@
                     <div class="Distancia">Distancia</div>
                     <div class="Fecha">Fecha</div>
                 </div>
-                <section >
+                <section>
                     <section class="competi">
                         <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                        <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de
+                                la reunion</a></div>
                         <div class="Categoria">Adultos</div>
                         <div class="Distancia">Sprint</div>
                         <div class="Fecha"> Sabado 1 de Junio de 2024</div>
@@ -390,31 +367,36 @@
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
                 <section class="competi">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
             </div>
         </div>
         <div id="Todo-completos">
             <div id="container-listado-competiciones">
-                <div class="Mes"><h4 id="mes-texto">Diciembre 2024</h4></div>
+                <div class="Mes">
+                    <h4 id="mes-texto">Diciembre 2024</h4>
+                </div>
                 <div id="listado-superior">
                     <div class="Modalidad">Modalidad</div>
                     <div class="Competicion">Competición</div>
@@ -422,10 +404,11 @@
                     <div class="Distancia">Distancia</div>
                     <div class="Fecha">Fecha</div>
                 </div>
-                <section >
+                <section>
                     <section class="competi">
                         <div class="Modalidad">Triatlon Cross</div>
-                        <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                        <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de
+                                la reunion</a></div>
                         <div class="Categoria">Adultos</div>
                         <div class="Distancia">Sprint</div>
                         <div class="Fecha"> Sabado 1 de Junio de 2024</div>
@@ -433,349 +416,67 @@
                 </section>
                 <section class="competi2">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
                 <section class="competi">
                     <div class="Modalidad">Triatlon Cross</div>
-                    <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
                     <div class="Categoria">Adultos</div>
                     <div class="Distancia">Sprint</div>
                     <div class="Fecha"> Sabado 1 de Junio de 2024</div>
                 </section>
-            </section>
-            <section class="competi2">
-                <div class="Modalidad">Triatlon Cross</div>
-                <div class="Competicion">XXVI Triatlon Cross  Minas de la reunion</div>
-                <div class="Categoria">Adultos</div>
-                <div class="Distancia">Sprint</div>
-                <div class="Fecha"> Sabado 1 de Junio de 2024</div>
-            </section>
+                </section>
+                <section class="competi2">
+                    <div class="Modalidad">Triatlon Cross</div>
+                    <div class="Competicion"><a href="" class="enlaces-competiciones"> XXVI Triatlon Cross Minas de la
+                            reunion</a></div>
+                    <div class="Categoria">Adultos</div>
+                    <div class="Distancia">Sprint</div>
+                    <div class="Fecha"> Sabado 1 de Junio de 2024</div>
+                </section>
             </div>
         </div>
-     
+        <footer>
+            <div id="footer"></div>
+        </footer>
 
 
 
     </main>
 
-    <footer>
-        <footer id="footerContainer">
-            <div id="margenes-footer">
-                <div id="contenedor-footer">
-                    <!--NOTICIAS-->
-                    <div class="articulos">
-                        <h3>Últimas noticias</h3>
-                        <div id="seccion-noticias">
-                            <article class="titulos-footer ">
-                                <header class="titulo-noticia"><a href=""> Cuenta atrás para la Gran Final de las Series
-                                        Mundiales
-                                    </a></header>
-                                <p class="subtitulo-noticia">La Gran Final de las Series Mundiales 2024...
-                                </p>
-                                <footer class="final-noticia">01 Abril 2024</footer>
-                            </article>
-                            <article class="titulos-footer ">
-                                <header class="titulo-noticia"><a href="">Nuevo récord en Ironman: ¡Menos de 7 horas!</a>
-                                </header>
-                                <p class="subtitulo-noticia">Triatleta desconocido rompe récord mundial en la distancia
-                                    Ironman
-                                </p>
-                                <footer class="final-noticia"></footer>
-                            </article>
-                            <article class="titulos-footer ">
-                                <header class="titulo-noticia"><a href="">Joven triatleta gana oro mundial junior</a>
-                                </header>
-                                <p class="subtitulo-noticia">Promesa juvenil del triatlón logra la medalla de oro en el
-                                    campeonato
-                                    mundial</p>
-                                <footer class="final-noticia"></footer>
-                            </article>
-                            <article class="titulos-footer">
-                                <header class="titulo-noticia"><a href="">Tecnología innovadora en trajes de neopreno</a>
-                                </header>
-                                <p class="subtitulo-noticia">Nuevo traje de neopreno promete cambiar el triatlón</p>
-                                <footer class="final-noticia"></footer>
-                            </article>
-                        </div>
-                        <a href="" class="enlaces-footer-final">noticias &rarr;</a>
-    
-                        <!--RESULTADOS-->
-                    </div>
-                    <div class="articulos">
-                        <h3>Últimos resultados</h3>
-                        <ul id="lista-proximo-eventos">
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer-primero">
-                                    <a href="">2024 E World Triathlon Championships London powered by Zwift</a>
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/gbr.svg" alt="" class="banderas">
-                                    </div>
-                                    <div class="lugar-evento-footer">
-                                        London, Great Britain
-                                    </div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div><img src="../assets/img/pdf.png" alt=""></div>
-                                    <div class="archivo-clasificaciones"><a href=""
-                                            class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div class="">
-                                        <div><img src="../assets/img/pdf.png" alt=""></div>
-                                        <div class="archivo-clasificaciones"><a href=""
-                                                class="enlace-clasificaciones-footer">Clasificación Femenina.pdf</a></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer">
-                                    <a href="">2024 Europe Triathlon Multisport Championships Coimbra</a>
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/prt.svg" alt="" class="banderas">
-                                    </div>
-                                    <div>
-                                        Coimbra, Portugal
-                                    </div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div><img src="../assets/img/pdf.png" alt=""></div>
-                                    <div class="archivo-clasificaciones"><a href=""
-                                            class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div class="">
-                                        <div><img src="../assets/img/pdf.png" alt=""></div>
-                                        <div class="archivo-clasificaciones"><a href=""
-                                                class="enlace-clasificaciones-footer">Clasificación Femenina.pdf</a></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer">
-                                    <a href="">C2024 Europe Triathlon Cup Cork</a>
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/irl.svg" alt="" class="banderas">
-                                    </div>
-                                    <div>
-                                        Cork, Ireland
-                                    </div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div><img src="../assets/img/pdf.png" alt=""></div>
-                                    <div class="archivo-clasificaciones"><a href=""
-                                            class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div class="">
-                                        <div><img src="../assets/img/pdf.png" alt=""></div>
-                                        <div class="archivo-clasificaciones"><a href=""
-                                                class="enlace-clasificaciones-footer">Clasificación Femenina.pdf</a></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer">
-                                    <a href="">2024 World Triathlon Championship Finals Torremolinos-Andalucia</a>
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/esp.svg" alt="" class="banderas">
-                                    </div>
-                                    <div>
-                                        Torremolinos, Spain
-                                    </div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div class="">
-                                        <div><img src="../assets/img/pdf.png" alt=""></div>
-                                        <div class="archivo-clasificaciones"><a href=""
-                                                class="enlace-clasificaciones-footer">Clasificación Masculina.pdf</a></div>
-                                    </div>
-                                </div>
-                                <div class="contenedor-archivo-resultados">
-                                    <div class="">
-                                        <div><img src="../" alt=""></div>
-                                        <div class="archivo-clasificaciones"><a href=""
-                                                class="enlace-clasificaciones-footer">Clasificación Femeninia.pdf</a></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="" class="enlaces-footer-final">resultados &rarr;</a>
-                    </div>
-    
-    
-                    <!--PROXIMAS COMPETICIONES-->
-                    <div class="articulos">
-                        <h3>Próximos eventos</h3>
-                        <ul id="lista-proximo-eventos">
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer-primero">
-                                    <a href="">2024 E World Triathlon Championships London powered by Zwift</a>
-                                </div>
-                                <div>
-                                    06 JUN 2024
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/gbr.svg" alt="" class="banderas">
-                                    </div>
-                                    <div class="lugar-evento-footer">
-                                        London, Great Britain
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer">
-                                    <a href="">2024 Europe Triathlon Multisport Championships Coimbra</a>
-                                </div>
-                                <div>
-                                    06 JUN 2024
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/prt.svg" alt="" class="banderas">
-                                    </div>
-                                    <div>
-                                        Coimbra, Portugal
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer">
-                                    <a href="">C2024 Europe Triathlon Cup Cork</a>
-                                </div>
-                                <div>
-                                    06 JUN 2024
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/irl.svg" alt="" class="banderas">
-                                    </div>
-                                    <div>
-                                        Cork, Ireland
-                                    </div>
-                                </div>
-    
-                            </li>
-                            <li class="eventos-completos">
-                                <div class="titulo-evento-footer">
-                                    <a href="">2024 World Triathlon Championship Finals Torremolinos-Andalucia</a>
-                                </div>
-                                <div>
-                                    06 JUN 2024
-                                </div>
-                                <div class="lugar-pruebas-footer">
-                                    <div>
-                                        <img src="https://triathlon-s3.imgix.net/flags/esp.svg" alt="" class="banderas">
-                                    </div>
-                                    <div>
-                                        Torremolinos, Spain
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="" class="enlaces-footer-final">eventos &rarr;</a>
-                    </div>
-    
-    
-                    <!--MULTIMEDIA-->
-                    <div class="articulos">
-                        <h3>Multimedia reciente</h3>
-                        <ul id="lista-multimedia-footer">
-                            <li class="videos">
-                                <div class="div-video"><a
-                                        href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
-                                        src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
-                                        alt="" id="fotillo"></div>
-                                <div class="div-texto"><a
-                                        href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
-                                        class="espacio-a">2024 World Triathlon Indoor Cup Lievin: EXTENDED HIGHLIGHTS</a>
-                                    <div> 01 Apr 2024</div>
-                                </div>
-                            </li>
-                            <li class="videos">
-                                <div class="div-video"><a
-                                        href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
-                                        src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
-                                        alt=""></div>
-                                <div class="div-texto"><a
-                                        href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
-                                        class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
-                                    <div> 01 Apr 2024</div>
-                                </div>
-                            </li>
-                            <li class="videos">
-                                <div class="div-video"><a
-                                        href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
-                                        src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
-                                        alt=""></div>
-                                <div class="div-texto"><a
-                                        href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
-                                        class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
-                                    <div> 01 Apr 2024</div>
-                                </div>
-                            </li>
-                            <li class="videos">
-                                <div class="div-video"><a
-                                        href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
-                                        src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
-                                        alt=""></div>
-                                <div class="div-texto"><a
-                                        href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
-                                        class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
-                                    <div> 01 Apr 2024</div>
-                                </div>
-                            </li>
-                            <li class="videos">
-                                <div class="div-video"><a
-                                        href="https://www.triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights/"></a><img
-                                        src="https://triathlon-uploads.imgix.net/video_thumbs/4230652.jpg?w=40&h=40&fit=crop&auto=compress"
-                                        alt=""></div>
-                                <div class="div-texto"><a
-                                        href="https://triathlon.org/multimedia/video/2024_world_triathlon_indoor_cup_lievin_extended_highlights"
-                                        class="espacio-a">World explicabo dolor magni hic aperiam doloremque</a>
-                                    <div> 01 Apr 2024</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-    
-    
-                    <!--SITIO DE INTERES Y EMAIL-->
-                    <div class="articulos">
-                        <div id="">
-                            <h3>Sitios de interes</h3>
-                        </div>
-                        <h3>Información relevante</h3>
-                        <ul id="lista-info">
-                            <li>Sobre nosotros</li>
-                            <li>Politca de privcidad</li>
-                            <li>Cookies</li>
-                            <li>Documentación</li>
-                        </ul>
-                        <h3>Enterate de todas nuestras noticias</h3>
-                        <div id="enviar-correo">
-                            <label for=""></label>
-                            <input type="email" placeholder="Introduce tu email" id="texto-email">
-                            <label for=""></label>
-                            <input type="submit" id="boton-enviar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </footer>
+    <script>
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  const headerContainer = document.getElementById('header');
+  const footerContainer = document.getElementById('footer');
+
+  // Obtener la ruta relativa al directorio actual
+  const currentPagePath = window.location.pathname;
+  const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+  // Cargar el encabezado
+  fetch(currentPageDirectory + '/header.html')
+      .then(response => response.text())
+      .then(data => {
+          headerContainer.innerHTML = data;
+      });
+
+  // Cargar el pie de página
+  fetch(currentPageDirectory + '/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          footerContainer.innerHTML = data;
+      });
+});
+
+
+
+    </script>
 </body>
 
 </html>
