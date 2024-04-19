@@ -345,6 +345,7 @@ nav {
 
 
 @media screen and (max-width: 950px) {
+
     #lista-eventos-desplegable,
     #lista-atletas-desplegable,
     #lista-multimedia-desplegable {
@@ -1517,6 +1518,7 @@ li div {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+
 .listas-filtros {
     width: 15px;
 }
@@ -1545,13 +1547,14 @@ li div {
     height: 2rem;
     margin-bottom: 1.5rem;
 }
+
 #container-filtros {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
     margin-right: 2rem;
-    
+
 }
 
 .listas-filtros {
@@ -1561,7 +1564,7 @@ li div {
     height: 2rem;
 }
 
-select{
+select {
     border-radius: 10px;
     height: 1.88rem;
 }
@@ -1581,10 +1584,10 @@ select{
 .Mes {
     font-size: 25px;
     text-align: left;
-    width:auto;
+    width: auto;
     color: rgb(43, 43, 188);
     margin-bottom: 2rem;
-    
+
 }
 
 #Todo-completos {
@@ -1597,7 +1600,7 @@ select{
 }
 
 #container-listado-competiciones {
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
 #listado-superior {
@@ -1605,36 +1608,38 @@ select{
     margin-left: 1rem;
     height: 3rem;
     background-color: rgb(46, 46, 218);
-    
+
 
 }
 
 #listado-superior div {
-   color: white;
-   justify-content: center;
-   align-items: center;
-   margin-top: 1rem;
-   margin-left: 1rem;
-  }
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
 
 .Modalidad {
-    width: 7rem
+    width: 15%;
 }
 
 .Competicion {
-    width: 19rem;
+    width: 35%;
 }
 
 .Categoria {
-    width: 7rem;
+    width: 10%;
 }
 
 .Distancia {
-    width: 7.3rem;
+    width: 8%;
 }
 
 .Fecha {
-    width: 12rem;
+    width: 20%;
+    max-width: 100%;
+    margin-bottom: 1rem;
 }
 
 .competi {
@@ -1642,7 +1647,7 @@ select{
     margin-left: 1rem;
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 
 .competi div {
@@ -1651,17 +1656,26 @@ select{
     margin-bottom: 2rem;
 }
 
-  .competi2 {
+.competi2 {
     background-color: aliceblue;
     margin-left: 1rem;
     display: flex;
     flex-wrap: wrap;
-  }
+}
 
-  .competi2 div {
+.competi2 div {
     margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
+}
+
+.enlaces-competiciones {
+    color: rgb(0, 44, 155);
+}
+
+.enlaces-competiciones:hover {
+    color: rgb(245, 171, 60);
+    ;
 }
 
 /*RESULTADOS HTML*/
@@ -1672,5 +1686,93 @@ select{
     margin-right: 1rem;
     height: 2rem;
 }
+
+/*INFO-INSCRIPCIONES*/
+
+#container-pagina-completa {
+    background-color: #ccc;
+}
+
+#contenido-pagina-completa {
+    display: flex;
+    margin-left: 2rem;
+}
+
+#container-cartel {
+    width: 20rem;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+}
+
+#imagen-cartel {
+    width: 25rem;
+}
+
+#section1 {
+    background-color: bisque;
+    width: 30rem;
+    margin-bottom: 3rem;
+}
+
+#section2 {
+    background-color: brown;
+    margin-left: 2rem;
+    width: 60%;
+    margin-bottom: 3rem;
+}
+
+#contenido-competicion {
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+}
+
+#titulo-inscripciones div h4 {
+    color: yellow;
+    margin-right: 5px;
+}
+
+#titulo-prueba {
+    font-size: 2.2rem;
+}
+
+#container-fecha-inscripciones {
+    margin-top: 0.8rem;
+}
+
+.fecha-inscripciones {
+    display: flex;
+    margin-top: 0.4rem;
+}
+
+#container-caracteristicas-prueba {
+    margin-top: 2rem;
+}
+
+#caracteristicas-prueba {
+    font-size: 18px;
+}
+
+#caracteristicas-prueba div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.info-y-icono {
+    display: flex;
+}
+
+.info-y-icono p:nth-of-type(1) {
+    margin-left: 1rem;
+}
+
+.info-y-icono p:nth-of-type(2) {
+    margin-left: 10px;
+}
+
+
+
+
 
 /* MENU MOVILES */
