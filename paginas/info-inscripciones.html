@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info-inscripciones</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div id="container-pagina-completa">
+            <div id="contenido-pagina-completa">
+                <section id="section1">
+                    <div id="container-cartel">
+                        <img src="../assets/img/Cartel.jpg" alt="" id="imagen-cartel">
+                    </div>
+                </section>
+                <section id="section2">
+                    <div id="contenido-competicion">
+                        <div id="titulo-inscripciones">
+                            <div>
+                                <h2 id="titulo-prueba">XII Desafio Calima posadas</h2>
+                            </div>
+                            <div id="container-fecha-inscripciones">
+                                <div class="fecha-inscripciones">
+                                    <h4>Fecha de competicion: </h4>
+                                    <p>Domingo,21 Abril 8:00</p>
+                                </div>
+                                <div class="fecha-inscripciones">
+                                    <h4>Cierre de inscripciones: </h4>
+                                    <p>Lunes 15 de Abril a las 23:59</p>
+                                </div>
+                            </div>
+                            <div id="container-caracteristicas-prueba">
+                                <div id="caracteristicas-prueba">
+                                    <div class="info-y-icono">
+                                        <img src="../assets/img/ubicacion.png" alt="">
+                                        <p>Provincia:
+                                        <p>
+                                        <p>Cordoba</p>
+                                    </div>
+                                    <div class="info-y-icono">
+                                        <img src="../assets/img/correr.png" alt="">
+                                        <p>Modalidad:</p>
+                                        <p>Triatlon</p>
+                                    </div>
+                                    <div class="info-y-icono">
+                                        <img src="../assets/img/lista.png" alt="">
+                                        <p>Categoria:</p>
+                                        <p>Circuito Provincial</p>
+                                    </div>
+                                    <div class="info-y-icono">
+                                        <img src="../assets/img/distancia.png" alt="">
+                                        <p>Distancia:</p>
+                                        <p>Media distancia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="container-archivos-informacion">
+                            <div id="archivos-informacion">
+                                <div>
+                                    <h3></h3>
+                                </div>
+                                <div>
+                                    <img src="" alt="">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="container-archivos-circuitos">
+                            <div id="archivos-circuitos">
+                                <div>
+                                    <h3></h3>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div id="container-archivos-inscripciones">
+                            <div id="archivos-inscripciones">
+                                <div>
+                                    <h3></h3>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div id="container- video-carrera">
+                            <div id="video-carrera">
+                                <div>
+                                    <iframe
+                                        src="https://www.youtube.com/embed/9l6JB7NMwjY?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Ftriatlonandalucia.org&amp;widgetid=1"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer id="footerContainer">
+    </footer>
+    <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+  const headerContainer = document.getElementById('header');
+  const footerContainer = document.getElementById('footer');
+
+  // Obtener la ruta relativa al directorio actual
+  const currentPagePath = window.location.pathname;
+  const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+  // Cargar el encabezado
+  fetch(currentPageDirectory + '/header.html')
+      .then(response => response.text())
+      .then(data => {
+          headerContainer.innerHTML = data;
+      });
+
+  // Cargar el pie de página
+  fetch(currentPageDirectory + '/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          footerContainer.innerHTML = data;
+      });
+});
+    </script>
+<script src="../assets/js/script.js"></script>
+</body>
+
+</html>
