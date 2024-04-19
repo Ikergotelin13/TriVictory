@@ -154,23 +154,3 @@ function updateSliderTienda(slideWidthIncrement) {
 
 
 /*AGREGAR HEADER Y FOOTER*/
-
-// Cargar el header del HTML externo
-fetch('eventos.html')
-.then(response => response.text())
-.then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const headerContent = doc.getElementById('headerContainer').innerHTML;
-    document.getElementById('headerContainer').innerHTML = headerContent;
-});
-
-// Cargar el footer del HTML externo
-fetch('eventos.html')
-.then(response => response.text())
-.then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const footerContent = doc.getElementById('footerContainer').innerHTML;
-    document.getElementById('footerContainer').innerHTML = footerContent;
-});
