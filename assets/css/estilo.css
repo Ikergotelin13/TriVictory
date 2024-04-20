@@ -1690,8 +1690,11 @@ select {
 /*INFO-INSCRIPCIONES*/
 
 #container-pagina-completa {
-    background-color: #ccc;
+    background-color: rgb(2, 41, 104);
+    height: 10rem;
+    z-index: 5;
 }
+
 
 #contenido-pagina-completa {
     display: flex;
@@ -1709,14 +1712,13 @@ select {
 }
 
 #section1 {
-    background-color: bisque;
+   /* background-color: bisque;*/
     width: 30rem;
     margin-bottom: 3rem;
 }
 
 #section2 {
-    background-color: brown;
-    margin-left: 2rem;
+   /* background-color: brown;*/
     width: 60%;
     margin-bottom: 3rem;
 }
@@ -1728,21 +1730,27 @@ select {
 }
 
 #titulo-inscripciones div h4 {
-    color: yellow;
+    color: rgb(245, 171, 60);
     margin-right: 5px;
 }
 
 #titulo-prueba {
     font-size: 2.2rem;
+    color: white;
 }
 
 #container-fecha-inscripciones {
     margin-top: 0.8rem;
+    margin-bottom: 4rem;
 }
 
 .fecha-inscripciones {
     display: flex;
     margin-top: 0.4rem;
+}
+
+.fecha-inscripciones p {
+    color: white;
 }
 
 #container-caracteristicas-prueba {
@@ -1771,8 +1779,25 @@ select {
     margin-left: 10px;
 }
 
+.archivo-y-pdf {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.titulos-info {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pdf {
+    width: 16px;
+    height: 16px;
+}
 
 
-
+#video-carrera {
+    margin-top: 1.5rem;
+}
 
 /* MENU MOVILES */
