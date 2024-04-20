@@ -11,7 +11,6 @@
 <body>
     <header id="header">
     </header>
-    <main>
         <div id="container-pagina-completa">
             <div id="contenido-pagina-completa">
                 <section id="section1">
@@ -61,31 +60,73 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div id="container-archivos-informacion">
                             <div id="archivos-informacion">
                                 <div>
-                                    <h3></h3>
+                                    <h3 class="titulos-info">Informacion</h3>
                                 </div>
-                                <div>
-                                    <img src="" alt="">
-                                    <p></p>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a
+                                        href="https://triatlonandalucia.org/wp-content/uploads/2024/03/NORMATIVA-DEL-CIRCUITO-PROVINCIAL-DE-DUATLON-Y-TRIATLON-DIPUTACION-DE-CORDOBA-2024.pdf">
+                                        <p>Normativa del circuito</p>
+                                    </a>
+                                </div>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a
+                                        href="https://triatlonandalucia.org/wp-content/uploads/2024/03/NORMATIVA-DEL-CIRCUITO-PROVINCIAL-DE-DUATLON-Y-TRIATLON-DIPUTACION-DE-CORDOBA-2024.pdf">
+                                        <p>Ficha de datos</p>
+                                    </a>
+                                </div>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a
+                                        href="https://triatlonandalucia.org/wp-content/uploads/2024/03/NORMATIVA-DEL-CIRCUITO-PROVINCIAL-DE-DUATLON-Y-TRIATLON-DIPUTACION-DE-CORDOBA-2024.pdf">
+                                        <p>Autorización Fatri</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div id="container-archivos-circuitos">
                             <div id="archivos-circuitos">
                                 <div>
-                                    <h3></h3>
+                                    <h3 class="titulos-info">Circuitos</h3>
                                 </div>
-                                <div></div>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a href="https://es.wikiloc.com/rutas-ciclismo/md-posadas-ciclismo-158527374">
+                                        <p>Natación</p>
+                                    </a>
+                                </div>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a href="https://es.wikiloc.com/rutas-ciclismo/md-posadas-ciclismo-158527374">
+                                        <p>Ciclismo</p>
+                                    </a>
+                                </div>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a href="https://es.wikiloc.com/rutas-ciclismo/md-posadas-ciclismo-158527374">
+                                        <p>Carrera a pie</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div id="container-archivos-inscripciones">
                             <div id="archivos-inscripciones">
                                 <div>
-                                    <h3></h3>
+                                    <h3 class="titulos-info">Inscripciones</h3>
                                 </div>
-                                <div></div>
+                                <div class="archivo-y-pdf">
+                                    <img src="../assets/img/pdf.png" alt="" class="pdf">
+                                    <a
+                                        href="https://triatlonandalucia.org/wp-content/uploads/2023/12/RELACION-INSCRITOS-AS-POR-DORSAL-XII-DESAFIO-CALIMA-POSADAS-Domingo-21-04-2024.pdf">
+                                        <p>Relación de inscritos por dorsal</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div id="container- video-carrera">
@@ -93,49 +134,45 @@
                                 <div>
                                     <iframe
                                         src="https://www.youtube.com/embed/9l6JB7NMwjY?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Ftriatlonandalucia.org&amp;widgetid=1"
-                                        frameborder="0"></iframe>
+                                        frameborder="0" width="600px" height="400px"></iframe>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </div>
+            <footer>
+                <div id="footer"></div>
+            </footer>
         </div>
+        
 
-
-
-
-
-    </main>
-
-    <footer id="footerContainer">
-    </footer>
     <script>
-                window.addEventListener('DOMContentLoaded', (event) => {
-  const headerContainer = document.getElementById('header');
-  const footerContainer = document.getElementById('footer');
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
 
-  // Obtener la ruta relativa al directorio actual
-  const currentPagePath = window.location.pathname;
-  const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
 
-  // Cargar el encabezado
-  fetch(currentPageDirectory + '/header.html')
-      .then(response => response.text())
-      .then(data => {
-          headerContainer.innerHTML = data;
-      });
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
 
-  // Cargar el pie de página
-  fetch(currentPageDirectory + '/footer.html')
-      .then(response => response.text())
-      .then(data => {
-          footerContainer.innerHTML = data;
-      });
-});
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
     </script>
-<script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
+  
 </body>
 
 </html>
