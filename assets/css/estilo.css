@@ -335,6 +335,7 @@ nav {
 
 }
 
+
 #lista-eventos-desplegable,
 #lista-atletas-desplegable,
 #lista-multimedia-desplegable {
@@ -1006,7 +1007,6 @@ p.texto-noticias-slider {
 
 #prueba-slider {
     display: flex;
-    /* Se elimina el margen */
 }
 
 .slide-tienda {
@@ -1107,8 +1107,6 @@ p.texto-noticias-slider {
 
 
 
-/*clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); */
-
 
 
 
@@ -1179,6 +1177,7 @@ footer a {
 #margenes-footer {
     padding-bottom: 3rem;
     padding-top: 1.5rem;
+    margin-left: 2rem;
 }
 
 
@@ -1416,6 +1415,7 @@ li div {
 #enviar-correo input {
     display: block;
     margin-bottom: 10px;
+    background-color: rgb(227, 227, 227);
     /* Espacio entre elementos */
 }
 
@@ -1510,6 +1510,7 @@ li div {
 #prueba-footer-abajo {
     width: 5rem;
 }
+
 
 
 /*EVENTOS.HTML*/
@@ -1678,6 +1679,11 @@ select {
     ;
 }
 
+
+
+
+
+
 /*RESULTADOS HTML*/
 
 .listas-filtros-resultados {
@@ -1686,6 +1692,13 @@ select {
     margin-right: 1rem;
     height: 2rem;
 }
+
+
+
+
+
+
+
 
 /*INFO-INSCRIPCIONES*/
 
@@ -1712,13 +1725,11 @@ select {
 }
 
 #section1 {
-   /* background-color: bisque;*/
     width: 30rem;
     margin-bottom: 3rem;
 }
 
 #section2 {
-   /* background-color: brown;*/
     width: 60%;
     margin-bottom: 3rem;
 }
@@ -1796,8 +1807,255 @@ select {
 }
 
 
+#boton-inscripciones{
+    background-color: rgb(47, 83, 229);
+    color: white;
+    width: 7rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+#boton-inscripciones:hover {
+    background-color: rgb(245, 171, 60);
+}
 #video-carrera {
     margin-top: 1.5rem;
 }
 
-/* MENU MOVILES */
+
+
+
+
+
+/*FORMULARIO INSCRIPCIONES*/
+
+#container-zona-alta-inscripciones {
+    height: 8.5rem;
+    
+}
+
+#zona-alta-inscripciones {
+    background-color: chocolate;
+    height: 5rem;
+    
+}
+
+#container-titulo-prueba-inscripcion {
+    background-color: #222;
+    height: 5rem;
+    width: auto;
+}
+
+#titulo-prueba-inscripcion {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    height: 5rem;
+    display: flex;
+    align-items:center ;
+}
+
+#nombre-prueba-inscripcion {
+   color: white;
+  
+}
+
+#opa-hijo {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: white;
+    
+}
+
+#laterales-inscripcion {
+    background-color:rgb(234, 232, 228);
+}
+
+
+
+#lista-superior {
+    background-color: rgb(0, 166, 255);
+    height: 1.5rem;
+}
+
+
+#lista-superior ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#lista-superior ul li {
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    
+    
+}
+
+#lista-superior ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilo del submenú */
+#lista-desplegable-inscripcion {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0, 166, 255);
+    padding: 0;
+    color: white;
+    
+}
+
+#lista-desplegable-inscripcion li {
+    display: block;
+    padding: 5px;
+    margin-left: -1rem;
+    
+}
+
+#lista-desplegable-inscripcion li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.enlaces-inscripciones {
+    color: white;
+}
+
+.enlaces-inscripciones:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/* Mostrar el submenú al pasar el ratón */
+#lista-completa li:hover #lista-desplegable-inscripcion {
+    display: block;
+}
+
+
+.numero  {
+    margin-top: 3rem;
+    color: black;
+}
+
+.titulo-inscripciones {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#campos-formularios {
+    display: grid;
+    gap: 10px;
+}
+
+#campos-formularios form section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    height: 3rem;
+}
+
+#campos-formularios form label {
+    margin-right: 20px; /* Más espacio entre el label y el input */
+    text-align: right; /* Alinear el texto a la derecha */
+}
+
+#campos-formularios form input,
+#campos-formularios form select {
+    width: calc(75% - 80px); /* Reducir el ancho del input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+#campos-formularios form button {
+    width: 100px;
+    height: 2rem;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pais {
+    height: 2.5rem;
+    width: 20rem;
+}
+
+section #pais {
+    width: calc(75% - 80px);
+ }
+
+.fecha-inputs {
+    display: flex;
+    width: 81%;
+}
+
+.select-fecha {
+    width: 12rem;
+    height: 2.5rem;
+}
+
+.categoria {
+    height: 2.5rem;
+}
+.fecha-inputs select {
+    flex: 1;
+    width: auto;
+    margin-right: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+ #opa {
+    margin-left: -3rem;
+ }
+
+#botones-formularios {
+    margin-right: 17.5rem;
+    text-align: right;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+#boton-reiniciar-formulario {
+    background-color: rgb(230, 110, 94);
+}
+
+#boton-reiniciar-formulario:hover {
+    background-color: rgb(232, 59, 36);
+}
+
+#boton-enviar {
+    background-color: rgb(126, 225, 128);
+}
+
+#boton-enviar:hover {
+    background-color: #45a049;
+}
+
+/*LISTADO DE PARTICIPANTES*/
+
+#lista-participantes-completa {
+    background-color: lightblue;
+}
+
+#titulo-lista-participantes h3 {
+    text-align: center;
+    font-size: 22px;
+}
+
+
