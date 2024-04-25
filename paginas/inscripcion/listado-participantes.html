@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado-participantes</title>
+    <link rel="stylesheet" href="../../assets/css/estilo.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <main id="laterales-inscripcion">
+        <div id="opa-hijo">
+            <div id>
+                <div id="container-zona-alta-inscripciones">
+                    <div id="zona-alta-inscripciones">
+                        <div id="container-titulo-prueba-inscripcion">
+                            <div id="titulo-prueba-inscripcion">
+                                <h2 id="nombre-prueba-inscripcion">XVII HOTIZON TRIATLON SEVILLLA (DISTANCIA OLIMPICA)
+                                </h2>
+                            </div>
+                        </div>
+                        <div id="lista-superior">
+                            <ul id="lista-completa">
+                                <a href="../../paginas/eventos.html">
+                                    <li class="numero">Inicio</li>
+                                </a>
+                                <li class="numero">Inscripciones
+                                    <ul id="lista-desplegable-inscripcion">
+                                        <a href="../../paginas/inscripcion/listado-participantes.html">
+                                            <li class="enlaces-inscripciones">Listado de participantes</li>
+                                        </a>
+                                        <a href="">
+                                            <a href="../../paginas/inscripcion/formulario-inscripcion.html">
+                                                <li class="enlaces-inscripciones">Inscribete</li>
+                                            </a>
+                                        </a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="container-lista-participantes-completa">
+                    <div id="lista-participantes-completa">
+                        <div id="titulo-lista-participantes">
+                            <h3>Liatado de participantes</h3>
+                        </div>
+                        <div id="container-filtros-listado-particpantes">
+                            <section></section>
+                            <section></section>
+                            <section>Registros encontrados</section>
+                        </div>
+                        <div id="container-tabla-lista-participantes">
+                            <table id="tabla-registros">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellidos</th>
+                                        <th>Categoría</th>
+                                        <th>Club</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Aquí se mostrarán los participantes desde la base de datos -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav id="navegacion-paginas-listado-participantes">
+                            <ul>
+                                <li>
+                                    <a href=""></a>
+                                </li>
+                                <li>
+                                    <input type="number">
+                                </li>
+                                <li>/</li>
+                                <li>2</li>
+                                <li>
+                                    <a href=""></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div id="footer"></div>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/../header-inscripciones.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '/../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+
+
+
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+    actualizarTabla();
+  });
+
+  function actualizarTabla() {
+    const tabla = document.getElementById('tabla-participantes').getElementsByTagName('tbody')[0];
+    // Aquí puedes agregar código para obtener los datos de la base de datos y construir las filas de la tabla
+    // Por ahora, vamos a simular la adición de una fila de ejemplo
+    const nuevoParticipante = {
+      nombre: 'Juan',
+      apellidos: 'Pérez',
+      categoria: 'Senior',
+      club: 'Club Deportivo'
+    };
+    const fila = tabla.insertRow();
+    const celdaNombre = fila.insertCell(0);
+    const celdaApellidos = fila.insertCell(1);
+    const celdaCategoria = fila.insertCell(2);
+    const celdaClub = fila.insertCell(3);
+    celdaNombre.innerText = nuevoParticipante.nombre;
+    celdaApellidos.innerText = nuevoParticipante.apellidos;
+    celdaCategoria.innerText = nuevoParticipante.categoria;
+    celdaClub.innerText = nuevoParticipante.club;
+  }
+
+    </script>
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+</html>
