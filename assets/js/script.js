@@ -193,3 +193,4 @@ function actualizarTabla() {
   // Luego, puedes construir dinámicamente las filas de la tabla y agregarlas al DOM
 }
 
+
