@@ -35,8 +35,13 @@ if (!$conexion){
     }
 
     // Parte 2: Mostrar los datos existentes
-    // Consulta los datos de la tabla participantes
-    $query = "SELECT * FROM participantes";
+    // Variables para paginación
+    $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
+    $max_registros = 5;
+    $inicio = ($pagina - 1) * $max_registros;
+
+    // Consulta los datos de la tabla participantes con paginación
+    $query = "SELECT * FROM participantes LIMIT $inicio, $max_registros";
     $result = mysqli_query($conexion, $query);
 
     if (!$result) {
@@ -106,6 +111,7 @@ if (!$conexion){
                 }
                 ?>
             </table>
+
         </body>
         </html>
         <?php
@@ -114,4 +120,3 @@ if (!$conexion){
     $conexion->close();
 }
 ?>
-
