@@ -33,7 +33,7 @@
                                         </a>
                                         <a href="">
                                             <a href="../../paginas/inscripcion/formulario-inscripcion.html">
-                                                <li class="enlaces-inscripciones">Inscribete</li>
+                                                <li class="enlaces-inscripciones">Inscríbete</li>
                                             </a>
                                         </a>
                                     </ul>
@@ -46,56 +46,60 @@
                 <div id="container-lista-participantes-completa">
                     <div id="lista-participantes-completa">
                         <div id="titulo-lista-participantes">
-                            <h3>Liatado de participantes</h3>
+                            <h3>Listado de participantes</h3>
                         </div>
-                        <div id="container-filtros-listado-particpantes">
-                            <section></section>
-                            <section></section>
-                            <section>Registros encontrados</section>
+                        <div id="container-filtros-listado-participantes">
+                            <div id="filtros-listado-participantes">
+                                <section id="buscador-palabras">
+                                    <!-- Buscador por palabras -->
+                                    <input type="text" id="buscador" placeholder="Buscar...">
+                                    <button id="buscar">Buscar</button>
+                                </section>
+                                <section id="filtros-participantes">
+                                    <!-- Filtros distintos -->
+                                    <label for="filtro-categoria"></label>
+                                    <select class="filtros">
+                                        <option value="todos">Ver todos</option>
+                                        <option value="Mujeres">Mujeres</option>
+                                        <option value="Hombres">Hombres</option>
+                                    </select>
+                                    <label for="filtro-edad"></label>
+                                    <select class="filtros">
+                                        <option value="Agrupar">Agrupar por</option>
+                                        <option value="Categoria">Categoría</option>
+                                        <option value="Club">Club</option>
+                                    </select>
+                                </section>
+                                <section>
+                                    <!-- Texto que muestra cuántos registros hay -->
+                                    <p id="num-registros">Registros encontrados: XX</p>
+                                </section>
+                            </div>
                         </div>
                         <div id="container-tabla-lista-participantes">
-                            <table id="tabla-registros">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Apellidos</th>
-                                        <th>Categoría</th>
-                                        <th>Club</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Aquí se mostrarán los participantes desde la base de datos -->
-                                </tbody>
-                            </table>
+                            <!-- Aquí se insertará la tabla de participantes generada por PHP -->
                         </div>
                         <nav id="navegacion-paginas-listado-participantes">
-                            <ul>
-                                <li>
-                                    <a href=""></a>
-                                </li>
-                                <li>
-                                    <input type="number">
-                                </li>
-                                <li>/</li>
-                                <li>2</li>
-                                <li>
-                                    <a href=""></a>
-                                </li>
+                            <ul id="pager">
+                                <!-- Paginación generada por JavaScript -->
                             </ul>
                         </nav>
+
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
     <footer>
         <div id="footer"></div>
     </footer>
+
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             const headerContainer = document.getElementById('header');
             const footerContainer = document.getElementById('footer');
+            const tablaContainer = document.getElementById('container-tabla-lista-participantes');
+            const pagerContainer = document.getElementById('pager');
 
             // Obtener la ruta relativa al directorio actual
             const currentPagePath = window.location.pathname;
@@ -114,36 +118,100 @@
                 .then(data => {
                     footerContainer.innerHTML = data;
                 });
+
+            // Cargar la tabla de participantes generada por PHP con la página actual
+            fetch('../../assets/php/procesar-formulario.php?pagina=1') // Modifica la página según sea necesario
+                .then(response => response.text())
+                .then(data => {
+                    tablaContainer.innerHTML = data;
+                });
+
+            // Obtener el número total de registros y actualizar el texto
+            fetch('../../assets/php/contar-registros.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('num-registros').textContent = "Registros encontrados: " + data;
+                    updatePager(parseInt(data)); // Actualiza el paginador con el número total de registros
+                });
         });
 
+        function updatePager(totalRecords) {
+            var maxPerPage = 5; // Número máximo de registros por página
+            var totalPages = Math.ceil(totalRecords / maxPerPage);
+            var pagerHTML = '';
 
+            // Construye la paginación
+            for (var i = 1; i <= totalPages; i++) {
+                pagerHTML += '<li><a href="#" onclick="loadPage(' + i + ')">' + i + '</a></li>';
+            }
+            document.getElementById('pager').innerHTML = pagerHTML;
+        }
 
-        
+        // Función para cargar una página específica
+        function loadPage(pageNumber) {
+            fetch('../../assets/php/procesar-formulario.php?pagina=' + pageNumber)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('container-tabla-lista-participantes').innerHTML = data;
+                });
+        }
 
-        document.addEventListener('DOMContentLoaded', function() {
-    actualizarTabla();
-  });
+        // Función para buscar registros
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnBuscar = document.getElementById('buscar');
+            const inputBuscador = document.getElementById('buscador');
+            const tablaContainer = document.getElementById('container-tabla-lista-participantes');
 
-  function actualizarTabla() {
-    const tabla = document.getElementById('tabla-participantes').getElementsByTagName('tbody')[0];
-    // Aquí puedes agregar código para obtener los datos de la base de datos y construir las filas de la tabla
-    // Por ahora, vamos a simular la adición de una fila de ejemplo
-    const nuevoParticipante = {
-      nombre: 'Juan',
-      apellidos: 'Pérez',
-      categoria: 'Senior',
-      club: 'Club Deportivo'
-    };
-    const fila = tabla.insertRow();
-    const celdaNombre = fila.insertCell(0);
-    const celdaApellidos = fila.insertCell(1);
-    const celdaCategoria = fila.insertCell(2);
-    const celdaClub = fila.insertCell(3);
-    celdaNombre.innerText = nuevoParticipante.nombre;
-    celdaApellidos.innerText = nuevoParticipante.apellidos;
-    celdaCategoria.innerText = nuevoParticipante.categoria;
-    celdaClub.innerText = nuevoParticipante.club;
-  }
+            btnBuscar.addEventListener('click', function () {
+                const valorBusqueda = inputBuscador.value.trim();
+
+                fetch('../../assets/php/buscar-registros.php?palabra=' + encodeURIComponent(valorBusqueda))
+                    .then(response => response.text())
+                    .then(data => {
+                        tablaContainer.innerHTML = data;
+                        updatePagination(parseInt(data)); // Actualiza la paginación con el número total de registros
+                    })
+                    .catch(error => console.error('Error al realizar la búsqueda:', error));
+            });
+        });
+
+        // Función para actualizar la paginación según la cantidad de resultados de la búsqueda
+        function updatePagination(totalRecords) {
+            var maxPerPage = 5; // Número máximo de registros por página
+            var totalPages = Math.ceil(totalRecords / maxPerPage);
+            var pagerHTML = '';
+
+            // Ajusta el número de páginas a mostrar en la paginación
+            var maxPagesToShow = 5; // Cambia este valor según tu preferencia
+            var startPage = 1;
+            var endPage = totalPages;
+            var currentPage = 1;
+
+            // Verifica si hay más páginas de las que se deben mostrar
+            if (totalPages > maxPagesToShow) {
+                var halfMaxPages = Math.floor(maxPagesToShow / 2);
+                currentPage = Math.min(Math.max(1, currentPage), totalPages); // Asegura que la página actual esté dentro del rango
+
+                // Calcula el inicio y el final de las páginas a mostrar
+                startPage = Math.max(currentPage - halfMaxPages, 1);
+                endPage = Math.min(currentPage + halfMaxPages, totalPages);
+
+                // Ajusta el inicio o el final si es necesario para mostrar el número correcto de páginas
+                if (endPage - startPage + 1 < maxPagesToShow) {
+                    if (currentPage < halfMaxPages + 1) {
+                        endPage = Math.min(startPage + maxPagesToShow - 1, totalPages);
+                    } else {
+                        startPage = Math.max(endPage - maxPagesToShow + 1, 1);
+                    }
+                }
+            }
+
+            // Construye la paginación
+            for (var i = startPage; i <= endPage; i++) {
+                pagerHTML += '<li><a href="#" onclick="loadPage(' + i + ')">' + i + '</a></li>';
+            }
+            document.getElementById('pager').innerHTML = pagerHTML;
+        }
 
     </script>
     <script src="../../assets/js/script.js"></script>
