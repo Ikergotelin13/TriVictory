@@ -76,7 +76,7 @@ a:hover {
 }
 
 
-nav {
+#navegacion {
     font-size: 17px;
     height: 45px;
     margin-top: 20px;
@@ -1807,7 +1807,7 @@ select {
 }
 
 
-#boton-inscripciones{
+#boton-inscripciones {
     background-color: rgb(47, 83, 229);
     color: white;
     width: 7rem;
@@ -1818,6 +1818,7 @@ select {
 #boton-inscripciones:hover {
     background-color: rgb(245, 171, 60);
 }
+
 #video-carrera {
     margin-top: 1.5rem;
 }
@@ -1831,13 +1832,13 @@ select {
 
 #container-zona-alta-inscripciones {
     height: 8.5rem;
-    
+
 }
 
 #zona-alta-inscripciones {
     background-color: chocolate;
     height: 5rem;
-    
+
 }
 
 #container-titulo-prueba-inscripcion {
@@ -1851,23 +1852,23 @@ select {
     margin-right: 1.5rem;
     height: 5rem;
     display: flex;
-    align-items:center ;
+    align-items: center;
 }
 
 #nombre-prueba-inscripcion {
-   color: white;
-  
+    color: white;
+
 }
 
 #opa-hijo {
     margin-left: 2rem;
     margin-right: 2rem;
     background-color: white;
-    
+
 }
 
 #laterales-inscripcion {
-    background-color:rgb(234, 232, 228);
+    background-color: rgb(234, 232, 228);
 }
 
 
@@ -1882,15 +1883,15 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
 }
 
 #lista-superior ul li {
     position: relative;
     align-items: center;
     cursor: pointer;
-    
-    
+
+
 }
 
 #lista-superior ul li a {
@@ -1909,14 +1910,14 @@ select {
     background-color: rgb(0, 166, 255);
     padding: 0;
     color: white;
-    
+
 }
 
 #lista-desplegable-inscripcion li {
     display: block;
     padding: 5px;
     margin-left: -1rem;
-    
+
 }
 
 #lista-desplegable-inscripcion li a {
@@ -1940,7 +1941,7 @@ select {
 }
 
 
-.numero  {
+.numero {
     margin-top: 3rem;
     color: black;
 }
@@ -1965,13 +1966,16 @@ select {
 }
 
 #campos-formularios form label {
-    margin-right: 20px; /* Más espacio entre el label y el input */
-    text-align: right; /* Alinear el texto a la derecha */
+    margin-right: 20px;
+    /* Más espacio entre el label y el input */
+    text-align: right;
+    /* Alinear el texto a la derecha */
 }
 
 #campos-formularios form input,
 #campos-formularios form select {
-    width: calc(75% - 80px); /* Reducir el ancho del input */
+    width: calc(75% - 80px);
+    /* Reducir el ancho del input */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -1995,7 +1999,7 @@ select {
 
 section #pais {
     width: calc(75% - 80px);
- }
+}
 
 .fecha-inputs {
     display: flex;
@@ -2010,6 +2014,7 @@ section #pais {
 .categoria {
     height: 2.5rem;
 }
+
 .fecha-inputs select {
     flex: 1;
     width: auto;
@@ -2020,9 +2025,9 @@ section #pais {
     box-sizing: border-box;
 }
 
- #opa {
+#opa {
     margin-left: -3rem;
- }
+}
 
 #botones-formularios {
     margin-right: 17.5rem;
@@ -2047,15 +2052,139 @@ section #pais {
     background-color: #45a049;
 }
 
+
+
+
 /*LISTADO DE PARTICIPANTES*/
 
-#lista-participantes-completa {
-    background-color: lightblue;
-}
+
 
 #titulo-lista-participantes h3 {
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
 }
 
+#container-filtros-listado-participantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#filtros-listado-participantes {
+    width: calc(75% - 10px);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#buscador {
+    width: calc(85% - 10px);
+    height: 2rem;
+
+}
+
+.filtros {
+    width: calc(20% - 10px);
+    margin: 10px;
+    padding-left: 10px;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+
+#buscar {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buscar:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: calc(100% - 10px);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    height: 2.5rem;
+}
+
+#num-registros {
+    color: #999;
+    text-align: center;
+}
+
+#filtros-participantes {
+    display: flex;
+    margin-left: -10px;
+}
+
+
+#tabla-registros {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-registros th,
+#tabla-registros td {
+    border-top: 1px solid #ddd;
+    /* línea de separación arriba */
+    border-bottom: 1px solid #ddd;
+    /* línea de separación abajo */
+    padding: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+#tabla-registros tbody tr:hover {
+    background-color: #f9f9f9;
+    /* fondo gris claro al pasar el ratón */
+}
+
+#navegacion-paginas-listado-participantes {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* Estilo para los números de paginación */
+
+#pager {
+    margin-top: 2rem;
+    text-align: center;
+    
+}
+#pager li {
+    display: inline;
+    margin-right: 5px;
+    margin-top: 10px;
+    
+}
+
+#pager li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #007bff; 
+}
+
+#pager li a:hover {
+    background-color: #2b5dc8;
+}
 
