@@ -1513,7 +1513,7 @@ li div {
 
 
 
-/*EVENTOS.HTML*/
+/*EVENTOS.PHP*/
 
 #contenedor-completo {
     margin-left: 2rem;
@@ -1539,7 +1539,9 @@ li div {
     width: auto;
     text-align: center;
     margin-bottom: 3rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 18px;
 }
 
 #busqueda {
@@ -1559,11 +1561,13 @@ li div {
 }
 
 .listas-filtros {
-    width: 11rem;
+    width: 7.8rem;
     margin-left: 1rem;
     margin-right: 1rem;
     height: 2rem;
 }
+
+
 
 select {
     border-radius: 10px;
@@ -1571,15 +1575,20 @@ select {
 }
 
 .botones-filtros {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    width: auto;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    margin-top: 1rem;
+    width: 8rem;
     border-radius: 5px;
     height: 1.88rem;
 }
 
 #boton-buscar {
     width: 4rem;
+}
+
+.mensaje-vacio {
+    margin-left: 2rem;
 }
 
 .Mes {
@@ -1651,6 +1660,7 @@ select {
 
 }
 
+
 .competi div {
     margin-left: 1rem;
     margin-top: 1rem;
@@ -1682,18 +1692,116 @@ select {
 
 
 
+#formulario-competicion {
+    display: none;
+    /* Ocultar el formulario por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 85%;
+    height: 4rem;
+}
+
+#formulario-competicion label {
+    display: block;
+    margin-bottom: 10px;
+    /* Espacio entre etiquetas */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#formulario-competicion select,
+#formulario-competicion input[type="date"] {
+    width: calc(100% - 10px);
+    /* Ajustar el ancho del select */
+    margin-bottom: 10px;
+    /* Espacio entre selects */
+    height: 1.5rem;
+    margin-right: 10px;
+}
+
+#formulario-competicion textarea {
+    height: 35px;
+    /* Altura deseada para los input de texto */
+    width: calc(100% - 10px);
+    /* Ajustar el ancho del textarea */
+    margin-bottom: 10px;
+    /* Espacio entre textareas */
+}
+
+#boton-añadir-competi {
+    width: 7rem;
+    height: 2rem;
+}
+
+
+#cerrar-formulario {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+/* Estilos para el formulario de eliminación */
+#formulario-eliminar-competicion {
+    display: none;
+    /* Ocultar el formulario por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 85%;
+}
+
+#formulario-eliminar-competicion label {
+    display: block;
+    margin-bottom: 10px;
+    /* Espacio entre etiquetas */
+}
+
+#formulario-eliminar-competicion input[type="text"] {
+    width: calc(100% - 10px);
+    /* Ajustar el ancho del input de texto */
+    margin-bottom: 10px;
+    /* Espacio entre inputs */
+}
+
+#cerrar-formulario-eliminar {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 
 
 /*RESULTADOS HTML*/
 
 .listas-filtros-resultados {
-    width: 8.7rem;
+    width: 10rem;
     margin-left: 1rem;
     margin-right: 1rem;
     height: 2rem;
 }
-
-
 
 
 
@@ -2166,13 +2274,14 @@ select {
 #pager {
     margin-top: 2rem;
     text-align: center;
-    
+
 }
+
 #pager li {
     display: inline;
     margin-right: 5px;
     margin-top: 10px;
-    
+
 }
 
 #pager li a {
@@ -2181,10 +2290,97 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #ffffff;
-    background-color: #007bff; 
+    background-color: #007bff;
 }
 
 #pager li a:hover {
     background-color: #2b5dc8;
 }
 
+
+
+/*MULTIMEDIA*/
+
+
+#principal {
+    margin-top: 2rem;
+    height: 4rem;
+}
+
+#oo {
+    font-size: 30px;
+    text-align: center;
+}
+
+.gallery-item {
+    width: 100%;
+    display: flex;
+    max-width: 800px;
+    /* O ajusta según tu preferencia */
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.foto-galeria {
+    width: 100px;
+    height: 100px;
+    border: solid #0056b3;
+    margin-bottom: 20px;
+    margin-right: 2em;
+    margin-top: 2em;
+
+
+}
+
+#image-container {
+    flex: 1;
+    text-align: right;
+}
+
+.gallery-item-text {
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    flex: 1;
+}
+
+.titulo-nombre-galeria {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gallery-item-text a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gallery-item-text a:hover {
+    text-decoration: underline;
+}
+
+.bandera-lugar {
+    height: 24px;
+    width: 24px;
+}
+
+.info-lugar-galeria {
+    display: flex;
+}
+
+.texto-lugar-galeria {
+    font-size: 12px;
+    color: #999;
+}
