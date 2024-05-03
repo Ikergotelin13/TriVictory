@@ -30,23 +30,31 @@ if (!$conexion){
         } else {
             $_SESSION["mensaje"] = "Error al enviar el formulario: " . $conexion->error;
         }
-
+        header("refresh:2; url=../../paginas/inscripcion/listado-participantes.html");
         $stmt->close();
     }
 
     // Parte 2: Mostrar los datos existentes
     // Variables para paginación
     $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
-    $max_registros = 5;
+    $max_registros = 9;
     $inicio = ($pagina - 1) * $max_registros;
 
     // Consulta los datos de la tabla participantes con paginación
-    $query = "SELECT * FROM participantes LIMIT $inicio, $max_registros";
-    $result = mysqli_query($conexion, $query);
-
-    if (!$result) {
-        $_SESSION["mensaje"] = "Error al obtener los datos de la base de datos: " . mysqli_error($conexion);
+    if (isset($_GET['filtro-categoria']) && $_GET['filtro-categoria'] !== 'todos') {
+        // Si se aplica un filtro de categoría, no limites los resultados por página
+        $query = "SELECT * FROM participantes WHERE categoria = ?";
+        $stmt = $conexion->prepare($query);
+        $stmt->bind_param("s", $_GET['filtro-categoria']);
+        $stmt->execute();
+        $result = $stmt->get_result();
     } else {
+        // Si no se aplica un filtro de categoría, utiliza la paginación normal
+        $query = "SELECT * FROM participantes LIMIT $inicio, $max_registros";
+        $result = mysqli_query($conexion, $query);
+    }
+
+    if ($result) {
         // Si la consulta fue exitosa, mostrar los datos en una tabla HTML
         ?>
         <!DOCTYPE html>
@@ -71,7 +79,6 @@ if (!$conexion){
                     padding: 10px;
                     padding-left: 20px;
                     text-align: left;
-                   
                 }
 
                 tr:hover {
@@ -112,11 +119,39 @@ if (!$conexion){
                 ?>
             </table>
 
+            <?php
+            // Obtener el número total de registros para la paginación
+            $query_total = "SELECT COUNT(*) as total FROM participantes";
+            if (isset($_GET['filtro-categoria']) && $_GET['filtro-categoria'] !== 'todos') {
+                // Si se aplica un filtro de categoría, cuenta todos los registros sin aplicar el filtro
+                $query_total = "SELECT COUNT(*) as total FROM participantes";
+            }
+            $resultado_total = mysqli_query($conexion, $query_total);
+            $fila_total = mysqli_fetch_assoc($resultado_total);
+            $total_registros = $fila_total['total'];
+            $total_paginas = ceil($total_registros / $max_registros);
+
+            // Si se aplica un filtro de categoría, actualiza la paginación para reflejar el número total de participantes
+            if (isset($_GET['filtro-categoria']) && $_GET['filtro-categoria'] !== 'todos') {
+                ?>
+                <nav>
+                    <ul>
+                        <?php for ($i = 1; $i <= $total_paginas; $i++) { ?>
+                            <li><a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?pagina=" . $i . "&filtro-categoria=" . urlencode($_GET['filtro-categoria']); ?>"><?php echo $i; ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </nav>
+            <?php } ?>
+
         </body>
         </html>
         <?php
         mysqli_free_result($result);
+    } else {
+        // Si la consulta no fue exitosa, mostrar un mensaje de error
+        $_SESSION["mensaje"] = "Error al obtener los datos de la base de datos: " . mysqli_error($conexion);
     }
     $conexion->close();
 }
 ?>
+
