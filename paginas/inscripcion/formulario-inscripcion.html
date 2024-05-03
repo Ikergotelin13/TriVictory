@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
                         </div>
                         <div id="lista-superior">
                             <ul id="lista-completa">
-                                <a href="../../paginas/eventos.html">
+                                <a href="../../paginas/eventos.php">
                                     <li class="numero">Inicio</li>
                                 </a>
                                 <li class="numero">Inscripciones
@@ -231,11 +231,11 @@
                                 </section>
                                 <section>
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required>
+                                    <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
                                 </section>
                                 <section>
                                     <label for="telefono-movil">Telefono Movil</label>
-                                    <input type="tel" id="telefono-movil" name="telefono-movil" required>
+                                    <input type="tel" id="telefono-movil" name="telefono-movil" placeholder="(Prefijo)Numero de telefono" required>
                                 </section>
                                 <section>
                                     <label for="pais">País</label>
@@ -243,6 +243,25 @@
                                         <option value="">Selecciona un país</option>
                                         <option value="ES">España</option>
                                         <option value="US">Estados Unidos</option>
+                                        <option value="AF">Afganistán</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DE">Alemania</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="SA">Arabia Saudi</option>
+                                        <option value="DZ">Argelia</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaiyan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrein</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BE">Bélgica</option>
+                                        <option value="BZ">Benín</option>
                                     </select>
                                 </section>
                                 <div id="botones-formularios">
@@ -263,7 +282,7 @@
 
 
     <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
+      window.addEventListener('DOMContentLoaded', (event) => {
             const headerContainer = document.getElementById('header');
             const footerContainer = document.getElementById('footer');
 
@@ -285,6 +304,28 @@
                     footerContainer.innerHTML = data;
                 });
         });
+
+        // Función para mostrar el mensaje de éxito y redireccionar después de enviar el formulario
+        function submitForm(event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+            const form = event.target; // Obtener el formulario enviado
+
+            // Mostrar mensaje de éxito
+            const mensajeExito = document.getElementById('mensaje-exito');
+            mensajeExito.style.display = 'block';
+
+            // Ocultar el formulario después de unos segundos
+            setTimeout(() => {
+                form.reset(); // Limpiar el formulario
+                mensajeExito.style.display = 'none'; // Ocultar el mensaje de éxito
+                const mensajeRedireccion = document.getElementById('mensaje-redireccion');
+                mensajeRedireccion.style.display = 'block'; // Mostrar el mensaje de redirección
+                // Redireccionar a otra página después de 2 segundos
+                setTimeout(() => {
+                    window.location.href = '../inscripcion/listado-participantes.html'; // Cambiar 'otra_pagina.html' por la URL deseada
+                }, 2000); // 2000 milisegundos = 2 segundos
+            }, 2000); // 2000 milisegundos = 2 segundos
+        }
 
     </script>
     <script src="../../assets/js/script.js"></script>
