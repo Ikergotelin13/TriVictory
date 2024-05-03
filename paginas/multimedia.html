@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Triatlón</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header">Galería de Triatlón</header>
+    <div id="principal">
+        <p id="oo">Multimedia</p>
+    </div>
+    <main>
+        <div class="gallery-item" id="gallery-item1">
+
+            <div class="gallery-item-text">
+                <p class="titulo-nombre-galeria">Campeonato de España de Duatlón Cros 2023</p>
+                <div class="info-lugar-galeria">
+                    <div>
+                        <img src="https://triathlon-s3.imgix.net/flags/gbr.svg" alt="" class="bandera-lugar">
+                    </div>
+                    <div>
+                        <p class="texto-lugar-galeria">20 de Junio 2023</p>
+                    </div>
+                </div>
+               
+                
+                <a href="galeria1.html">Ver galería</a>
+            </div>
+            <div id="image-container">
+                <img src="../assets/img/Culott.jpg" alt="Imagen 1" class="foto-galeria">
+            </div>
+        </div>
+        <div class="gallery-item" id="gallery-item2">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <div class="gallery-item-text">
+                <p>Competidores en bicicleta</p>
+                <a href="galeria2.html">Ver galería</a>
+            </div>
+        </div>
+        <!-- Agrega más items de galería según sea necesario -->
+    </main>
+    <footer>
+        <div id="footer">© 2024 Galería de Triatlón</div>
+    </footer>
+
+
+    <script>
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const headerContainer = document.getElementById('header');
+            const footerContainer = document.getElementById('footer');
+
+            // Obtener la ruta relativa al directorio actual
+            const currentPagePath = window.location.pathname;
+            const currentPageDirectory = currentPagePath.substring(0, currentPagePath.lastIndexOf('/'));
+
+            // Cargar el encabezado
+            fetch(currentPageDirectory + '/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                });
+
+            // Cargar el pie de página
+            fetch(currentPageDirectory + '/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>
